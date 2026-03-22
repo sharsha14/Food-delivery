@@ -1,0 +1,6 @@
+from flask import Flask
+from flask_cors import CORS
+from pymongo import MongoClient
+import bcrypt
+from dotenv import load_dotenv
+import hashlib
