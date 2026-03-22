@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sri Venkata Kanaka Mahalakshmi Tiffins — Authentic Guntur & Vijayawada Tiffins · Tirupati</title>
-<link rel="icon" type="image/webp" href="C:/Users/arun/OneDrive/Desktop/dosa.webp">
+<link rel="icon" type="image/webp" href="dosa.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -59,7 +59,7 @@ body {
   inset: -10%;
   width: 120%;
   height: 120%;
-  background: url('C:/Users/arun/OneDrive/Desktop/dosa.webp') center center / cover no-repeat;
+  background: url('dosa.webp') center center / cover no-repeat;
   animation: cinematicDrift 25s ease-in-out infinite alternate,
              bgFadeIn 2s ease-out forwards;
   opacity: 0;
@@ -894,7 +894,7 @@ body {
       </div>
       <div class="qr-panel" id="qrPanel">
         <div class="qr-img" style="padding:0;overflow:hidden;border:2px solid var(--pri-bd);">
-          <img src="C:/Users/arun/OneDrive/Desktop/QR.jpeg" alt="QR Code" style="width:100%;height:100%;object-fit:cover;border-radius:var(--rs);display:block;" onerror="this.style.display='none';this.parentElement.innerHTML+='<span style=\'font-size:48px;display:flex;align-items:center;justify-content:center;width:100%;height:100%\'>⬛</span>'">
+          <img src="QR.jpeg" alt="QR Code" style="width:100%;height:100%;object-fit:cover;border-radius:var(--rs);display:block;" onerror="this.style.display='none';this.parentElement.innerHTML+='<span style=\'font-size:48px;display:flex;align-items:center;justify-content:center;width:100%;height:100%\'>⬛</span>'">
         </div>
         <div class="qr-amt" id="qrAmt">₹0</div>
         <div class="qr-note">Scan the QR code and pay the exact amount shown</div>
@@ -986,29 +986,29 @@ const API_BASE = 'https://food-delivery-jdu9.onrender.com/api';
 
 /* ─── LOCAL IMAGE MAP ─── */
 const ITEM_IMAGES = {
-  'Dosa':                 'C:/Users/arun/OneDrive/Desktop/dosa.webp',
-  'Ghee Dosa':            'C:/Users/arun/OneDrive/Desktop/Dosa ghee.jpg',
-  'Set Dosa':             'C:/Users/arun/OneDrive/Desktop/set dosa.JPG',
-  'Uthappam':             'C:/Users/arun/OneDrive/Desktop/uttappam.avif',
-  'Karam Dosa':           'C:/Users/arun/OneDrive/Desktop/karaam dosa.jpg',
-  'Ghee Karam Dosa':      'C:/Users/arun/OneDrive/Desktop/ghee karaam dosa.webp',
-  'Masala Dosa':          'C:/Users/arun/OneDrive/Desktop/masala dosa.webp',
-  'Ghee Masala Dosa':     'C:/Users/arun/OneDrive/Desktop/ghee masla dosa.jpg',
-  'Rava Dosa':            'C:/Users/arun/OneDrive/Desktop/rava dosa.webp',
-  'Onion Rava Dosa':      'C:/Users/arun/OneDrive/Desktop/onion-rava-dosa.jpg',
-  'Ghee Rava Dosa':       'C:/Users/arun/OneDrive/Desktop/Dosa ghee.jpg',
-  'Ghee Onion Rava Dosa': 'C:/Users/arun/OneDrive/Desktop/ghee karaam dosa.webp',
-  'Pesarattu':            'C:/Users/arun/OneDrive/Desktop/pesarattu-dosa.jpg',
-  'Ghee Pesarattu':       'C:/Users/arun/OneDrive/Desktop/pesarattu-dosa.jpg',
-  'Onion Pesarattu':      'C:/Users/arun/OneDrive/Desktop/onion pesaratu.jpg',
-  'Egg Dosa':             'C:/Users/arun/OneDrive/Desktop/egg dosa.jpg',
-  'Double Egg Dosa':      'C:/Users/arun/OneDrive/Desktop/double egg dosa.jpg',
-  'Idly':                 'C:/Users/arun/OneDrive/Desktop/idly.jpg',
-  'Podi Idly':            'C:/Users/arun/OneDrive/Desktop/idly.jpg',
-  'Ghee Podi Idly':       'C:/Users/arun/OneDrive/Desktop/idly.jpg',
-  'Vada':                 'C:/Users/arun/OneDrive/Desktop/udi vada.jpg',
-  'Masala Vada':          'C:/Users/arun/OneDrive/Desktop/masala vada.jpg',
-  'Poori':                'C:/Users/arun/OneDrive/Desktop/poori.jpeg',
+  'Dosa':                 'dosa.webp',
+  'Ghee Dosa':            'Dosa_and_ghee.jpg',
+  'Set Dosa':             'set dosa.JPG',
+  'Uthappam':             'uttappam.avif',
+  'Karam Dosa':           'karaam dosa.jpg',
+  'Ghee Karam Dosa':      'ghee karaam dosa.webp',
+  'Masala Dosa':          'masala dosa.webp',
+  'Ghee Masala Dosa':     'ghee masla dosa.jpg',
+  'Rava Dosa':            'rava dosa.webp',
+  'Onion Rava Dosa':      'onion-rava-dosai-easy-01.jpg',
+  'Ghee Rava Dosa':       'Dosa_and_ghee.jpg',
+  'Ghee Onion Rava Dosa': 'ghee karaam dosa.webp',
+  'Pesarattu':            'pesarattu-dosa.jpg',
+  'Ghee Pesarattu':       'pesarattu-dosa.jpg',
+  'Onion Pesarattu':      'pesarattu-dosa.jpg',
+  'Egg Dosa':             'egg dosa.jpg',
+  'Double Egg Dosa':      'double egg dosa.jpg',
+  'Idly':                 'idly.jpg',
+  'Podi Idly':            'idly.jpg',
+  'Ghee Podi Idly':       'idly.jpg',
+  'Vada':                 'udi vada.jpg',
+  'Masala Vada':          'masala vada.jpg',
+  'Poori':                'poori.jpeg',
 };
 const imgCache = ITEM_IMAGES;
 
