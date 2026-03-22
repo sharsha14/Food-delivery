@@ -1,0 +1,1963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sri Venkata Kanaka Mahalakshmi Tiffins — Authentic Guntur & Vijayawada Tiffins · Tirupati</title>
+<link rel="icon" type="image/webp" href="C:/Users/arun/OneDrive/Desktop/dosa.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+/* ════════════════════════════════════
+   RESET & ROOT
+════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --pri:    #1A6B3C;
+  --pri-l:  #228B4E;
+  --pri-ll: #2EAD62;
+  --pri-bd: #B8DECA;
+  --gold:   #C8922A;
+  --gold-l: #E0A830;
+  --gold-bd:#E8D09A;
+  --leaf:   #15803D;
+  --chilli: #B91C1C;
+  --ink:    #111827;
+  --ink2:   #1F2937;
+  --ink3:   #374151;
+  --muted:  #6B7280;
+  --faint:  #9CA3AF;
+  --line:   #E5E7EB;
+  --sh-xs: 0 1px 3px rgba(0,0,0,.06);
+  --sh-s:  0 2px 12px rgba(0,0,0,.08);
+  --sh-m:  0 6px 24px rgba(0,0,0,.10);
+  --sh-l:  0 16px 48px rgba(0,0,0,.14);
+  --r: 14px; --rs: 9px; --rxs: 6px;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: #fff; color: var(--ink3);
+  overflow-x: hidden; -webkit-font-smoothing: antialiased;
+}
+
+/* ══════════════════════════════════
+   FULL BACKGROUND WITH VIDEO-LIKE ANIMATION
+══════════════════════════════════ */
+.bg-cinema {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.bg-cinema-img {
+  position: absolute;
+  inset: -10%;
+  width: 120%;
+  height: 120%;
+  background: url('C:/Users/arun/OneDrive/Desktop/dosa.webp') center center / cover no-repeat;
+  animation: cinematicDrift 25s ease-in-out infinite alternate,
+             bgFadeIn 2s ease-out forwards;
+  opacity: 0;
+  will-change: transform, opacity;
+  transform-origin: center center;
+}
+
+@keyframes bgFadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes cinematicDrift {
+  0%   { transform: scale(1.0) translate(0%, 0%)    rotate(0deg); }
+  20%  { transform: scale(1.05) translate(-2%, -1%) rotate(0.3deg); }
+  40%  { transform: scale(1.08) translate(2%, -2%)  rotate(-0.2deg); }
+  60%  { transform: scale(1.06) translate(-1%, 1%)  rotate(0.4deg); }
+  80%  { transform: scale(1.09) translate(1.5%, 0%) rotate(-0.3deg); }
+  100% { transform: scale(1.12) translate(-2%, 2%)  rotate(0.2deg); }
+}
+
+/* Color wash overlay that shifts hue slightly — cinematic grade */
+.bg-cinema-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(26,107,60,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(200,146,42,0.06) 0%, transparent 50%),
+    linear-gradient(135deg, rgba(255,255,255,0.89) 0%, rgba(255,251,235,0.85) 50%, rgba(240,253,244,0.88) 100%);
+  animation: overlayBreath 8s ease-in-out infinite alternate;
+}
+
+@keyframes overlayBreath {
+  0%   { opacity: 0.92; }
+  50%  { opacity: 0.87; }
+  100% { opacity: 0.90; }
+}
+
+/* Floating particles for extra video-like feel */
+.bg-particles {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0;
+  animation: floatUp linear infinite;
+}
+@keyframes floatUp {
+  0%   { opacity: 0;    transform: translateY(100vh) scale(0); }
+  10%  { opacity: 0.4; }
+  90%  { opacity: 0.15; }
+  100% { opacity: 0;    transform: translateY(-20vh) scale(1.5); }
+}
+
+/* Light leak effect */
+.bg-light-leak {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: conic-gradient(from 220deg at 85% 15%, rgba(200,146,42,0.05), transparent 30%);
+  animation: leakRotate 20s linear infinite;
+}
+@keyframes leakRotate {
+  0%   { transform: rotate(0deg) scale(1); }
+  100% { transform: rotate(360deg) scale(1.1); }
+}
+
+/* ── LOADING BUTTON STATE ── */
+.btn-loading {
+  position: relative; cursor: not-allowed !important;
+  color: transparent !important;
+}
+.btn-loading::after {
+  content: '';
+  position: absolute; top: 50%; left: 50%;
+  width: 18px; height: 18px; margin: -9px 0 0 -9px;
+  border: 2.5px solid rgba(255,255,255,0.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: btnSpin 0.7s linear infinite;
+}
+@keyframes btnSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* ════════════════════════════════════
+   HEADER
+════════════════════════════════════ */
+.hdr {
+  position: sticky; top: 0; z-index: 900;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 1px 12px rgba(0,0,0,.06);
+}
+.hdr-top {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 16px;
+}
+.logo {
+  width: 48px; height: 48px; border-radius: 12px;
+  background: linear-gradient(135deg, var(--pri), #0D4A28);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(26,107,60,.32); position: relative;
+}
+.logo::after {
+  content:''; position:absolute; inset:0; border-radius:12px;
+  border:1.5px solid rgba(255,255,255,.2);
+}
+.brand { flex:1; min-width:0; }
+.brand-name {
+  font-family:'Cormorant Garamond',serif;
+  font-size:16px; font-weight:700; color:var(--ink);
+  line-height:1.15; letter-spacing:-.01em;
+}
+.brand-name em { color:var(--pri); font-style:normal; }
+.brand-sub { font-size:10.5px; color:var(--muted); font-weight:500; margin-top:2px; }
+.brand-meta { display:flex; align-items:center; gap:8px; margin-top:3px; }
+.city { font-size:11px; color:var(--muted); font-weight:500; }
+.badge-open {
+  font-size:8.5px; font-weight:700; letter-spacing:.7px; text-transform:uppercase;
+  padding:2px 8px; border-radius:20px;
+  background:#ECFDF5; color:var(--leaf); border:1px solid #A7F3D0;
+}
+.hdr-actions { display:flex; align-items:center; gap:6px; flex-shrink:0; }
+
+.login-btn {
+  display:flex; align-items:center; gap:5px;
+  background:#fff; border:1.5px solid var(--pri-bd);
+  border-radius:var(--rs); padding:0 12px; height:40px;
+  font-size:12px; font-weight:600; color:var(--pri);
+  cursor:pointer; transition:all .18s; white-space:nowrap;
+}
+.login-btn:hover { background:var(--pri); color:#fff; border-color:var(--pri); }
+.login-btn.hidden { display:none; }
+
+.user-chip {
+  display:none; align-items:center; gap:7px;
+  background:#fff; border:1.5px solid var(--pri-bd);
+  border-radius:var(--rs); padding:0 12px; height:40px;
+  font-size:13px; font-weight:600; color:var(--pri);
+  cursor:default; white-space:nowrap; box-shadow:var(--sh-xs);
+}
+.user-chip.on { display:flex; }
+.u-avatar {
+  width:26px; height:26px; border-radius:50%;
+  background:linear-gradient(135deg,var(--pri),var(--pri-l));
+  color:#fff; font-size:11px; font-weight:700;
+  display:flex; align-items:center; justify-content:center; flex-shrink:0;
+}
+
+.orders-btn {
+  display:none; align-items:center; gap:5px;
+  background:#fff; border:1.5px solid var(--line);
+  border-radius:var(--rs); padding:0 11px; height:40px;
+  font-size:12px; font-weight:500; color:var(--muted);
+  cursor:pointer; transition:all .18s; white-space:nowrap;
+}
+.orders-btn.on { display:flex; }
+.orders-btn:hover { border-color:var(--pri); color:var(--pri); background:#F0FAF4; }
+
+.logout-chip {
+  display:none; align-items:center; gap:4px;
+  background:#fff; border:1.5px solid var(--line);
+  border-radius:var(--rs); padding:0 10px; height:40px;
+  font-size:12px; font-weight:500; color:var(--muted);
+  cursor:pointer; transition:all .18s; white-space:nowrap;
+}
+.logout-chip.on { display:flex; }
+.logout-chip:hover { border-color:var(--chilli); color:var(--chilli); background:#FFF5F5; }
+
+.cart-btn {
+  position:relative; background:#fff; border:1.5px solid var(--line);
+  width:42px; height:42px; border-radius:var(--rs);
+  cursor:pointer; font-size:19px;
+  display:flex; align-items:center; justify-content:center;
+  transition:all .2s; box-shadow:var(--sh-xs);
+}
+.cart-btn:hover { background:var(--pri); border-color:var(--pri); transform:scale(1.05); }
+.cart-n {
+  position:absolute; top:-5px; right:-5px;
+  background:var(--gold); color:#fff; font-size:9px; font-weight:700;
+  width:17px; height:17px; border-radius:50%;
+  display:none; align-items:center; justify-content:center;
+  border:2px solid #fff; box-shadow:0 2px 6px rgba(200,146,42,.38);
+}
+.cart-n.on { display:flex; }
+
+/* ════════════════════════════════════
+   MARQUEE
+════════════════════════════════════ */
+.marquee {
+  background: linear-gradient(90deg,#0A1F0E,#122B17,#0A1F0E);
+  overflow: hidden; font-size: 12px; font-weight: 500;
+  color: rgba(255,255,255,.82); letter-spacing: .4px;
+  padding: 9px 0; border-bottom: 2px solid var(--gold); position: relative;
+}
+.marquee::before, .marquee::after {
+  content:''; position:absolute; top:0; width:60px; height:100%; z-index:2; pointer-events:none;
+}
+.marquee::before { left:0; background:linear-gradient(to right,#0A1F0E,transparent); }
+.marquee::after  { right:0; background:linear-gradient(to left,#0A1F0E,transparent); }
+.mq-wrap { display:flex; overflow:hidden; width:100%; }
+.mq-track {
+  display: flex; white-space: nowrap;
+  animation: mq-scroll 18s linear infinite; will-change: transform;
+}
+.mq-track span {
+  display: inline-flex; align-items: center;
+  padding: 0 28px; flex-shrink: 0;
+}
+.mq-track span::before { content:"◈"; color:var(--gold-l); font-size:9px; margin-right:10px; }
+@keyframes mq-scroll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+.marquee:hover .mq-track { animation-play-state: paused; }
+
+/* ════════════════════════════════════
+   SEARCH
+════════════════════════════════════ */
+.search-bar { padding:9px 16px 12px; background:rgba(255,255,255,0.8); backdrop-filter:blur(8px); }
+.search-wrap { position:relative; }
+.search-wrap input {
+  width:100%; padding:11px 16px 11px 42px;
+  border:1.5px solid var(--line); border-radius:var(--rs);
+  font-family:'Plus Jakarta Sans',sans-serif; font-size:14px; color:var(--ink);
+  background:rgba(255,255,255,0.9); outline:none; transition:all .2s;
+}
+.search-wrap input:focus { border-color:var(--pri); box-shadow:0 0 0 3px rgba(26,107,60,.08); }
+.search-wrap input::placeholder { color:var(--faint); }
+.s-icon { position:absolute; left:13px; top:50%; transform:translateY(-50%); font-size:16px; color:var(--faint); pointer-events:none; }
+
+/* ════════════════════════════════════
+   RESTO STRIP
+════════════════════════════════════ */
+.resto-strip {
+  display:flex; background:rgba(255,255,255,0.9);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+  overflow-x:auto; -webkit-overflow-scrolling:touch;
+}
+.resto-strip::-webkit-scrollbar { display:none; }
+.r-chip {
+  display:flex; align-items:center; gap:5px;
+  padding:11px 18px; border-right:1px solid var(--line);
+  font-size:12px; color:var(--muted); font-weight:500;
+  white-space:nowrap; flex-shrink:0;
+}
+.r-chip:last-child { border-right:none; }
+.r-chip b { color:var(--ink); font-weight:700; }
+
+/* ════════════════════════════════════
+   MAIN
+════════════════════════════════════ */
+.main { padding:22px 16px 150px; max-width:1040px; margin:0 auto; }
+
+.cat-block { margin-bottom:44px; }
+.cat-head { display:flex; align-items:center; gap:14px; margin-bottom:16px; }
+.cat-title { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:700; color:var(--ink); white-space:nowrap; letter-spacing:-.01em; }
+.cat-accent { display:inline-block; width:4px; height:22px; border-radius:4px; background:linear-gradient(180deg,var(--pri),var(--gold)); flex-shrink:0; }
+.cat-rule { flex:1; height:1px; background:var(--line); }
+.cat-count { font-size:10.5px; font-weight:700; color:var(--pri); background:rgba(255,255,255,0.95); border:1.5px solid var(--pri-bd); border-radius:20px; padding:3px 11px; white-space:nowrap; }
+
+/* ════════════════════════════════════
+   MENU GRID & CARD
+════════════════════════════════════ */
+.menu-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+
+.menu-card {
+  background:rgba(255,255,255,0.96); border:1.5px solid var(--line); border-radius:var(--r);
+  display:flex; flex-direction:column; overflow:hidden;
+  box-shadow:var(--sh-s); transition:box-shadow .25s,border-color .25s,transform .2s;
+  backdrop-filter:blur(8px);
+}
+.menu-card:hover { box-shadow:var(--sh-m); border-color:var(--pri-bd); transform:translateY(-3px); }
+.menu-card.cat-dosa { border-top:3px solid var(--pri); }
+.menu-card.cat-idly { border-top:3px solid var(--gold); }
+
+.c-thumb {
+  width:100%; height:120px; flex-shrink:0; position:relative; overflow:hidden;
+  background:#f3f4f6;
+  display:flex; align-items:center; justify-content:center;
+}
+.c-thumb img {
+  width:100%; height:100%; object-fit:cover;
+  transition:transform .35s ease;
+}
+.menu-card:hover .c-thumb img { transform:scale(1.06); }
+.c-thumb .c-emoji {
+  position:absolute; font-size:40px;
+  display:flex; align-items:center; justify-content:center;
+  width:100%; height:100%;
+  background:linear-gradient(135deg,#F0FDF4,#FFFBEB);
+  z-index:0;
+}
+.c-thumb img { position:relative; z-index:1; }
+.c-thumb.loaded .c-emoji { display:none; }
+
+.veg-badge {
+  position:absolute; top:8px; left:8px; z-index:2;
+  display:flex; align-items:center; gap:4px;
+  background:rgba(255,255,255,.95); border-radius:var(--rxs);
+  padding:3px 7px; font-size:9px; font-weight:700; letter-spacing:.4px;
+  border:1px solid rgba(0,0,0,.07);
+}
+.vb-dot { width:9px; height:9px; border-radius:2px; border:1.5px solid; display:flex; align-items:center; justify-content:center; }
+.vb-dot::after { content:''; width:4px; height:4px; border-radius:50%; }
+.vb-veg { color:var(--leaf); } .vb-veg .vb-dot { border-color:var(--leaf); } .vb-veg .vb-dot::after { background:var(--leaf); }
+.vb-nv  { color:var(--chilli); } .vb-nv .vb-dot { border-color:var(--chilli); } .vb-nv .vb-dot::after { background:var(--chilli); }
+
+.c-body { padding:12px 13px 13px; flex:1; display:flex; flex-direction:column; background:rgba(255,255,255,0.98); }
+.c-name { font-size:14px; font-weight:700; color:var(--ink); line-height:1.25; margin-bottom:3px; }
+.c-desc { font-size:11px; color:var(--muted); line-height:1.45; margin-bottom:9px; flex:1; }
+.c-footer { display:flex; align-items:center; justify-content:space-between; gap:8px; margin-top:auto; }
+.c-price { font-family:'Cormorant Garamond',serif; font-size:19px; font-weight:700; color:var(--pri); letter-spacing:-.01em; }
+.c-price small { font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; color:var(--faint); }
+
+.add-btn {
+  background:linear-gradient(135deg,var(--pri),var(--pri-l));
+  color:#fff; border:none; border-radius:var(--rs);
+  padding:7px 14px; font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:12px; font-weight:700; cursor:pointer;
+  transition:all .2s; box-shadow:0 3px 10px rgba(26,107,60,.25); white-space:nowrap;
+}
+.add-btn:hover { background:linear-gradient(135deg,var(--pri-l),var(--pri-ll)); transform:scale(1.04); }
+
+.qty-ctrl {
+  display:flex; align-items:center;
+  background:linear-gradient(135deg,var(--pri),var(--pri-l));
+  border-radius:var(--rs); overflow:hidden; box-shadow:0 3px 10px rgba(26,107,60,.25);
+}
+.q-btn { background:none; border:none; color:#fff; width:30px; height:32px; font-size:17px; font-weight:700; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .15s; }
+.q-btn:hover { background:rgba(0,0,0,.15); }
+.q-num { color:#fff; font-weight:700; font-size:13px; width:24px; text-align:center; }
+
+/* ════════════════════════════════════
+   CHECKOUT BAR
+════════════════════════════════════ */
+.chk-bar { position:fixed; bottom:0; left:0; right:0; z-index:800; padding:12px 16px; pointer-events:none; display:none; }
+.chk-bar.on { display:block; }
+.chk-inner {
+  max-width:1040px; margin:0 auto;
+  background:linear-gradient(135deg,#0A1F0E,#122B17);
+  border-radius:var(--r); padding:14px 20px;
+  display:flex; align-items:center; justify-content:space-between;
+  cursor:pointer; pointer-events:all;
+  box-shadow:0 8px 32px rgba(0,0,0,.22);
+  border:1px solid rgba(200,146,42,.3); transition:transform .22s;
+}
+.chk-inner:hover { transform:translateY(-2px); }
+.chk-info { color:#fff; }
+.chk-lbl  { font-size:14px; font-weight:600; }
+.chk-lbl strong { color:#A7F3D0; }
+.chk-sub  { font-size:11px; color:rgba(255,255,255,.44); margin-top:2px; }
+.chk-cta { background:linear-gradient(135deg,var(--gold),var(--gold-l)); color:var(--ink); border-radius:var(--rs); padding:10px 20px; font-weight:800; font-size:13.5px; white-space:nowrap; box-shadow:0 4px 14px rgba(200,146,42,.38); }
+
+/* ════════════════════════════════════
+   OVERLAY / SHEET
+════════════════════════════════════ */
+.overlay {
+  position:fixed; inset:0; background:rgba(0,0,0,.45);
+  z-index:1000; display:none; align-items:flex-end; justify-content:center;
+  backdrop-filter:blur(4px);
+}
+.overlay.on { display:flex; animation:fin .2s; }
+@keyframes fin { from{opacity:0} to{opacity:1} }
+.sheet {
+  background:#fff; border-radius:22px 22px 0 0;
+  width:100%; max-width:700px; max-height:92vh; overflow-y:auto;
+  animation:sup .32s cubic-bezier(.34,1.45,.64,1);
+}
+@keyframes sup { from{transform:translateY(100%)} to{transform:translateY(0)} }
+.sheet::-webkit-scrollbar { width:4px; }
+.sheet::-webkit-scrollbar-thumb { background:var(--line); border-radius:4px; }
+
+.drag { width:38px; height:3.5px; background:var(--line); border-radius:4px; margin:13px auto 0; }
+.sh-hdr { display:flex; align-items:center; justify-content:space-between; padding:14px 20px 12px; border-bottom:1px solid var(--line); background:#fff; }
+.sh-title { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:700; color:var(--ink); letter-spacing:-.01em; }
+.sh-close { background:#fff; border:1.5px solid var(--line); width:32px; height:32px; border-radius:50%; cursor:pointer; font-size:13px; display:flex; align-items:center; justify-content:center; color:var(--muted); transition:all .18s; }
+.sh-close:hover { background:var(--line); color:var(--ink); }
+.sh-body { padding:20px; background:#fff; }
+
+/* ════════════════════════════════════
+   AUTH TABS
+════════════════════════════════════ */
+.auth-tabs { display:flex; border-bottom:2px solid var(--line); margin-bottom:20px; }
+.auth-tab {
+  flex:1; padding:10px; text-align:center; font-size:14px; font-weight:600;
+  color:var(--muted); cursor:pointer; border-bottom:2px solid transparent;
+  margin-bottom:-2px; transition:all .2s;
+}
+.auth-tab.active { color:var(--pri); border-bottom-color:var(--pri); }
+
+/* ════════════════════════════════════
+   CART
+════════════════════════════════════ */
+.cart-row { display:flex; align-items:center; gap:12px; padding:13px 0; border-bottom:1px solid var(--line); }
+.cart-row:last-of-type { border-bottom:none; }
+.cart-thumb { width:52px; height:52px; border-radius:10px; overflow:hidden; background:#F0FDF4; border:1px solid var(--pri-bd); flex-shrink:0; display:flex; align-items:center; justify-content:center; }
+.cart-thumb img { width:100%; height:100%; object-fit:cover; }
+.cart-thumb-emoji { font-size:24px; }
+.cart-name  { font-size:14px; font-weight:600; color:var(--ink); }
+.cart-price { font-size:12px; color:var(--muted); margin-top:2px; }
+.sum-box { background:#fff; border:1.5px solid var(--line); border-radius:var(--rs); padding:16px; margin-top:16px; }
+.sr { display:flex; justify-content:space-between; font-size:13.5px; color:var(--muted); padding:5px 0; }
+.sr.tot { font-size:15px; font-weight:700; color:var(--ink); border-top:1px solid var(--line); margin-top:6px; padding-top:10px; }
+.sr.tot span:last-child { font-family:'Cormorant Garamond',serif; font-size:20px; color:var(--pri); }
+.min-warn { background:#FFFBEB; border:1px solid var(--gold-bd); border-radius:var(--rs); padding:10px 14px; font-size:12.5px; color:#92670A; font-weight:500; margin-top:14px; display:none; }
+.min-warn.on { display:block; }
+.empty-st { text-align:center; padding:50px 20px; color:var(--muted); }
+.empty-st .ei { font-size:52px; margin-bottom:12px; }
+.empty-st h3 { font-family:'Cormorant Garamond',serif; font-size:20px; color:var(--ink); margin-bottom:6px; }
+.empty-st p  { font-size:13px; }
+
+/* ════════════════════════════════════
+   FORMS
+════════════════════════════════════ */
+.fg { margin-bottom:15px; }
+.fg label { display:block; font-size:10.5px; font-weight:700; color:var(--muted); margin-bottom:6px; letter-spacing:.7px; text-transform:uppercase; }
+.opt { font-size:10px; color:var(--faint); font-weight:400; text-transform:none; letter-spacing:0; }
+.fi { width:100%; padding:11px 14px; border:1.5px solid var(--line); border-radius:var(--rs); font-family:'Plus Jakarta Sans',sans-serif; font-size:14px; color:var(--ink); background:#fff; outline:none; transition:all .2s; }
+.fi:focus { border-color:var(--pri); box-shadow:0 0 0 3px rgba(26,107,60,.08); }
+.fi::placeholder { color:var(--faint); }
+.g2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.inp-r { position:relative; }
+.eye { position:absolute; right:12px; top:50%; transform:translateY(-50%); background:none; border:none; cursor:pointer; font-size:15px; color:var(--muted); }
+
+/* ════════════════════════════════════
+   BUTTONS
+════════════════════════════════════ */
+.btn-dark { display:block; width:100%; padding:13px; background:linear-gradient(135deg,var(--ink),var(--ink2)); color:#fff; border:none; border-radius:var(--rs); font-family:'Plus Jakarta Sans',sans-serif; font-size:14px; font-weight:600; cursor:pointer; transition:all .2s; box-shadow:0 4px 14px rgba(0,0,0,.16); }
+.btn-dark:hover { transform:translateY(-1px); box-shadow:var(--sh-m); }
+.btn-dark:disabled { background:#9CA3AF; cursor:not-allowed; transform:none; box-shadow:none; }
+.btn-spice { display:block; width:100%; padding:13px; background:linear-gradient(135deg,var(--pri),var(--pri-l)); color:#fff; border:none; border-radius:var(--rs); font-family:'Plus Jakarta Sans',sans-serif; font-size:14px; font-weight:700; cursor:pointer; transition:all .2s; box-shadow:0 4px 14px rgba(26,107,60,.24); }
+.btn-spice:hover { background:linear-gradient(135deg,var(--pri-l),var(--pri-ll)); transform:translateY(-1px); }
+.btn-spice:disabled { background:#86BFAA; cursor:not-allowed; transform:none; box-shadow:none; }
+.btn-ol { display:block; width:100%; padding:12px; background:#fff; color:var(--ink3); border:1.5px solid var(--line); border-radius:var(--rs); font-family:'Plus Jakarta Sans',sans-serif; font-size:14px; font-weight:500; cursor:pointer; transition:all .2s; margin-top:10px; }
+.btn-ol:hover { border-color:var(--ink); background:#FAFAFA; }
+.auth-sw { text-align:center; margin-top:16px; font-size:13px; color:var(--muted); }
+.auth-sw a { color:var(--pri); font-weight:600; cursor:pointer; }
+.auth-sw a:hover { text-decoration:underline; }
+
+/* ════════════════════════════════════
+   STEP PIPS
+════════════════════════════════════ */
+.step-bar { display:flex; align-items:center; justify-content:center; gap:6px; padding:10px 20px 12px; border-bottom:1px solid var(--line); background:#fff; }
+.pip { height:3.5px; border-radius:4px; background:var(--line); width:28px; transition:all .3s; }
+.pip.act { background:var(--pri); width:46px; }
+.pip.dn  { background:var(--pri); opacity:.3; }
+
+/* ════════════════════════════════════
+   AREA BOX / PAYMENT
+════════════════════════════════════ */
+.area-box { display:none; background:#fff; border:1.5px solid var(--pri-bd); border-radius:var(--rs); padding:10px 14px; margin-top:8px; align-items:center; justify-content:space-between; font-size:13px; }
+.area-box.on { display:flex; }
+.a-charge { font-weight:700; color:var(--pri); }
+.pay-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:20px; }
+.pay-card { border:2px solid var(--line); border-radius:var(--r); padding:18px 12px; cursor:pointer; text-align:center; background:#fff; transition:all .22s; }
+.pay-card:hover { border-color:var(--pri-bd); box-shadow:var(--sh-s); }
+.pay-card.sel { border-color:var(--pri); box-shadow:0 0 0 4px rgba(26,107,60,.10); }
+.p-icon { font-size:28px; margin-bottom:7px; }
+.p-name { font-size:13px; font-weight:700; color:var(--ink); }
+.p-hint { font-size:11px; color:var(--muted); margin-top:3px; }
+.qr-panel { background:#fff; border:1.5px solid var(--line); border-radius:var(--r); padding:22px 20px; text-align:center; margin-bottom:16px; display:none; }
+.qr-panel.on { display:block; }
+.qr-img { width:150px; height:150px; background:#fff; border:2px dashed var(--pri-bd); border-radius:var(--rs); margin:0 auto 14px; display:flex; align-items:center; justify-content:center; font-size:62px; }
+.qr-amt { font-family:'Cormorant Garamond',serif; font-size:30px; font-weight:700; color:var(--ink); margin-bottom:4px; letter-spacing:-.02em; }
+.qr-note { font-size:12px; color:var(--muted); margin-bottom:14px; }
+.cbox { background:#fff; border:1.5px solid var(--line); border-radius:var(--r); padding:16px; margin-bottom:16px; }
+.cr { display:flex; justify-content:space-between; font-size:13px; color:var(--muted); padding:5px 0; }
+.cr.tot { font-size:15px; font-weight:700; color:var(--ink); border-top:1px solid var(--line); margin-top:6px; padding-top:10px; }
+
+/* ════════════════════════════════════
+   ORDER TRACKING
+════════════════════════════════════ */
+.ord-card { background:linear-gradient(135deg,#0A1F0E,#122B17); border-radius:var(--r); padding:22px 20px; margin-bottom:22px; text-align:center; border:1px solid rgba(200,146,42,.25); box-shadow:var(--sh-m); }
+.oc-tag { font-size:10px; color:rgba(255,255,255,.4); letter-spacing:1.5px; text-transform:uppercase; }
+.oc-id  { font-family:'Cormorant Garamond',serif; font-size:30px; font-weight:700; color:#A7F3D0; margin:6px 0; letter-spacing:-.01em; }
+.oc-st  { display:inline-block; background:rgba(200,146,42,.2); color:#FDE68A; border-radius:20px; padding:4px 16px; font-size:12px; font-weight:600; }
+.trk-timer { margin-top:12px; display:inline-flex; align-items:center; gap:7px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.14); border-radius:20px; padding:5px 16px; font-size:12px; color:rgba(255,255,255,.7); font-weight:500; }
+.trk-timer b { color:#A7F3D0; font-weight:700; font-size:13px; min-width:36px; display:inline-block; }
+.pulse-dot { width:7px; height:7px; border-radius:50%; background:#A7F3D0; animation:pulse 1.4s ease-in-out infinite; flex-shrink:0; }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.35;transform:scale(.65)} }
+.trk-progress-wrap { margin-top:14px; background:rgba(255,255,255,.1); border-radius:10px; height:5px; overflow:hidden; }
+.trk-progress-bar { height:100%; border-radius:10px; background:linear-gradient(90deg,var(--pri-l),var(--gold-l)); width:0%; transition:width .8s ease; }
+.trk-list { margin:20px 0; }
+.t-step { display:flex; align-items:flex-start; gap:16px; padding-bottom:22px; position:relative; }
+.t-step:last-child { padding-bottom:0; }
+.t-step::before { content:''; position:absolute; left:15px; top:32px; width:2px; height:calc(100% - 14px); background:var(--line); transition:background .4s; }
+.t-step:last-child::before { display:none; }
+.t-step.done::before { background:linear-gradient(180deg,var(--pri),var(--gold)); }
+.t-dot { width:32px; height:32px; border-radius:50%; border:2px solid var(--line); background:#fff; display:flex; align-items:center; justify-content:center; font-size:13px; flex-shrink:0; z-index:1; transition:all .4s cubic-bezier(.34,1.45,.64,1); }
+.t-step.active .t-dot { border-color:var(--gold); background:#FFFBEB; animation:glow-ring 1.6s ease-in-out infinite; }
+@keyframes glow-ring { 0%,100%{box-shadow:0 0 0 4px rgba(200,146,42,.15)} 50%{box-shadow:0 0 0 9px rgba(200,146,42,.06)} }
+.t-step.done .t-dot { background:linear-gradient(135deg,var(--pri),var(--pri-l)); border-color:var(--pri); box-shadow:0 0 0 4px rgba(26,107,60,.12); color:#fff; }
+.t-info { padding-top:5px; flex:1; }
+.t-lbl  { font-size:14px; font-weight:600; color:var(--ink); }
+.t-sub  { font-size:12px; color:var(--muted); margin-top:2px; }
+.t-time { font-size:11px; color:var(--pri); font-weight:600; margin-top:3px; display:none; }
+.t-time.on { display:block; }
+.t-cd   { font-size:11px; color:var(--gold); font-weight:700; margin-top:4px; display:none; }
+.t-cd.on { display:block; }
+
+/* ════════════════════════════════════
+   ORDER HISTORY
+════════════════════════════════════ */
+.ord-hist-card {
+  border:1.5px solid var(--line); border-radius:var(--r);
+  padding:16px; margin-bottom:14px;
+  transition:box-shadow .2s;
+}
+.ord-hist-card:hover { box-shadow:var(--sh-s); }
+.oh-top { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px; }
+.oh-num { font-family:'Cormorant Garamond',serif; font-size:18px; font-weight:700; color:var(--pri); }
+.oh-date { font-size:11px; color:var(--faint); }
+.oh-status {
+  display:inline-flex; align-items:center; gap:5px;
+  padding:3px 10px; border-radius:20px; font-size:11px; font-weight:700;
+}
+.oh-status.placed       { background:#EFF6FF; color:#1D4ED8; }
+.oh-status.preparing    { background:#FFF7ED; color:#C2410C; }
+.oh-status.out          { background:#F0FDF4; color:#15803D; }
+.oh-status.delivered    { background:#F0FDF4; color:#15803D; }
+.oh-items { font-size:12.5px; color:var(--muted); margin-bottom:8px; line-height:1.6; }
+.oh-footer { display:flex; justify-content:space-between; align-items:center; padding-top:10px; border-top:1px solid var(--line); }
+.oh-total { font-family:'Cormorant Garamond',serif; font-size:17px; font-weight:700; color:var(--ink); }
+.oh-pay { font-size:11px; color:var(--muted); }
+.track-again-btn {
+  background:linear-gradient(135deg,var(--pri),var(--pri-l));
+  color:#fff; border:none; border-radius:var(--rs);
+  padding:6px 14px; font-size:12px; font-weight:700; cursor:pointer;
+  transition:all .2s;
+}
+.track-again-btn:hover { background:linear-gradient(135deg,var(--pri-l),var(--pri-ll)); transform:scale(1.03); }
+.hist-empty { text-align:center; padding:40px 20px; color:var(--muted); }
+.hist-empty .hi { font-size:44px; margin-bottom:10px; }
+/* ── FAST LOADING SPINNER ── */
+.hist-loading { text-align:center; padding:30px 20px; color:var(--muted); font-size:14px;
+  display:flex; flex-direction:column; align-items:center; gap:14px; }
+.hist-loading-spinner {
+  width:32px; height:32px; border-radius:50%;
+  border:3px solid var(--pri-bd); border-top-color:var(--pri);
+  animation:btnSpin 0.6s linear infinite;
+}
+
+/* ════════════════════════════════════
+   NO RESULTS / TOAST
+════════════════════════════════════ */
+.no-res { text-align:center; padding:50px 20px; color:var(--muted); font-size:15px; display:none; }
+.toast {
+  position:fixed; top:16px; left:50%;
+  transform:translateX(-50%) translateY(-90px);
+  background:linear-gradient(135deg,#0A1F0E,#122B17);
+  color:#fff; padding:11px 24px; border-radius:50px;
+  font-size:13px; font-weight:500; z-index:9999;
+  transition:transform .35s cubic-bezier(.34,1.5,.64,1);
+  white-space:nowrap; max-width:92vw; text-align:center;
+  border:1px solid rgba(200,146,42,.3); box-shadow:var(--sh-l);
+}
+.toast.on { transform:translateX(-50%) translateY(0); }
+
+/* ════════════════════════════════════
+   RESPONSIVE
+════════════════════════════════════ */
+@media (max-width:560px) {
+  .menu-grid { grid-template-columns:1fr 1fr; gap:10px; }
+  .c-thumb { height:100px; }
+  .c-name  { font-size:13px; }
+  .c-desc  { font-size:11px; }
+  .c-price { font-size:17px; }
+  .add-btn { padding:6px 10px; font-size:11.5px; }
+  .q-btn   { width:26px; height:28px; }
+  .q-num   { font-size:12px; width:20px; }
+  .g2 { grid-template-columns:1fr; }
+  .hdr-top { padding:9px 12px; }
+  .main { padding:14px 12px 140px; }
+  .brand-name { font-size:13px; }
+}
+@media (max-width:380px) { .menu-grid { grid-template-columns:1fr; } }
+@media (min-width:701px) {
+  .overlay { align-items:center; }
+  .sheet { border-radius:20px; margin-bottom:40px; max-height:88vh; }
+}
+@media (min-width:900px) { .menu-grid { grid-template-columns:repeat(3,1fr); } }
+
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════
+     CINEMATIC BACKGROUND
+════════════════════════════════ -->
+<div class="bg-cinema">
+  <div class="bg-cinema-img"></div>
+  <div class="bg-cinema-overlay"></div>
+</div>
+<div class="bg-light-leak"></div>
+<div class="bg-particles" id="bgParticles"></div>
+
+<!-- ══════════════════════════════════
+     HEADER
+══════════════════════════════════ -->
+<header class="hdr">
+  <div class="hdr-top">
+    <div class="logo">🍽️</div>
+    <div class="brand">
+      <div class="brand-name">Sri Venkata Kanaka <em>Mahalakshmi Tiffins</em></div>
+      <div class="brand-sub">Authentic Guntur &amp; Vijayawada Tiffins</div>
+      <div class="brand-meta">
+        <span class="city">📍 Tirupati, Andhra Pradesh</span>
+        <span class="badge-open">● Open</span>
+      </div>
+    </div>
+    <div class="hdr-actions">
+      <button class="login-btn" id="loginBtn" onclick="openAuth()">👤 Login</button>
+      <div class="user-chip" id="userChip">
+        <div class="u-avatar" id="uAvatar">U</div>
+        <span id="uName">User</span>
+      </div>
+      <button class="orders-btn" id="ordersBtn" onclick="openOrderHistory()">📋 Orders</button>
+      <button class="logout-chip" id="logoutChip" onclick="doLogout()">🚪</button>
+      <button class="cart-btn" onclick="openCart()" aria-label="View Cart">
+        🛒<span class="cart-n" id="cartN">0</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- MARQUEE -->
+  <div class="marquee">
+    <div class="mq-wrap">
+      <div class="mq-track" id="mqTrack"></div>
+    </div>
+  </div>
+
+  <!-- Search -->
+  <div class="search-bar">
+    <div class="search-wrap">
+      <span class="s-icon">🔍</span>
+      <input type="text" id="searchInput" placeholder="Search dosa, idly, vada, poori…" oninput="filterMenu()" autocomplete="off">
+    </div>
+  </div>
+</header>
+
+<!-- RESTO STRIP -->
+<div class="resto-strip">
+  <div class="r-chip">⭐ <b>4.3</b>&nbsp;Rating</div>
+  <div class="r-chip">⏱ <b>20 min</b>&nbsp;delivery</div>
+  <div class="r-chip">🛵 Free &lt; 5 km</div>
+  <div class="r-chip">🕐 7–11 AM &amp; 4–11 PM</div>
+</div>
+
+<!-- MAIN -->
+<main class="main" id="mainContent">
+  <div class="no-res" id="noRes">😕 No items match your search.</div>
+</main>
+
+<!-- CHECKOUT BAR -->
+<div class="chk-bar" id="chkBar">
+  <div class="chk-inner" onclick="openCart()">
+    <div class="chk-info">
+      <div class="chk-lbl"><strong id="barItems">0 Items</strong> &nbsp;·&nbsp; <strong id="barTotal">₹0</strong></div>
+      <div class="chk-sub">Tap to view cart &amp; checkout</div>
+    </div>
+    <div class="chk-cta">View Cart →</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     CART MODAL
+══════════════════════════════════ -->
+<div class="overlay" id="cartModal">
+  <div class="sheet">
+    <div class="drag"></div>
+    <div class="sh-hdr">
+      <div class="sh-title">Your Cart</div>
+      <button class="sh-close" onclick="closeModal('cartModal')">✕</button>
+    </div>
+    <div class="sh-body">
+      <div id="cartWrap"></div>
+      <div class="min-warn" id="minWarn">⚠️ Minimum order quantity of 2 required to proceed.</div>
+      <div class="sum-box" id="sumBox" style="display:none">
+        <div class="sr"><span>Subtotal</span><span id="sumSub">₹0</span></div>
+        <div class="sr"><span>Delivery Charge</span><span id="sumDel">—</span></div>
+        <div class="sr tot"><span>Total Payable</span><span id="sumTot">₹0</span></div>
+      </div>
+      <br>
+      <button class="btn-spice" id="chkBtn" onclick="proceedCheckout()">Proceed to Checkout →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     AUTH MODAL
+══════════════════════════════════ -->
+<div class="overlay" id="authModal">
+  <div class="sheet">
+    <div class="drag"></div>
+    <div class="sh-hdr">
+      <div class="sh-title">My Account</div>
+      <button class="sh-close" onclick="closeModal('authModal')">✕</button>
+    </div>
+    <div class="sh-body">
+      <div class="auth-tabs">
+        <div class="auth-tab active" id="tabLogin" onclick="switchAuthTab('login')">Login</div>
+        <div class="auth-tab" id="tabSignup" onclick="switchAuthTab('signup')">Create Account</div>
+      </div>
+      <div id="loginForm">
+        <div class="fg">
+          <label>Phone Number</label>
+          <input class="fi" type="tel" id="lPhone" placeholder="10-digit mobile number" maxlength="10">
+        </div>
+        <div class="fg">
+          <label>Password</label>
+          <div class="inp-r">
+            <input class="fi" type="password" id="lPass" placeholder="Your password" style="padding-right:44px">
+            <button class="eye" onclick="togglePwd('lPass',this)">👁️</button>
+          </div>
+        </div>
+        <button class="btn-dark" id="loginSubmitBtn" onclick="doLogin()">Login →</button>
+        <p class="auth-sw">New here? <a onclick="switchAuthTab('signup')">Create an account →</a></p>
+      </div>
+      <div id="signupForm" style="display:none">
+        <div class="fg"><label>Full Name</label><input class="fi" type="text" id="sName" placeholder="Your full name"></div>
+        <div class="g2">
+          <div class="fg"><label>Phone</label><input class="fi" type="tel" id="sPhone" placeholder="10-digit number" maxlength="10"></div>
+          <div class="fg"><label>Email</label><input class="fi" type="email" id="sEmail" placeholder="email@example.com"></div>
+        </div>
+        <div class="fg">
+          <label>Password</label>
+          <div class="inp-r">
+            <input class="fi" type="password" id="sPass" placeholder="Min. 6 characters" style="padding-right:44px">
+            <button class="eye" onclick="togglePwd('sPass',this)">👁️</button>
+          </div>
+        </div>
+        <div class="fg">
+          <label>Confirm Password</label>
+          <div class="inp-r">
+            <input class="fi" type="password" id="sConf" placeholder="Repeat password" style="padding-right:44px">
+            <button class="eye" onclick="togglePwd('sConf',this)">👁️</button>
+          </div>
+        </div>
+        <button class="btn-dark" id="signupSubmitBtn" onclick="doSignup()">Create Account →</button>
+        <p class="auth-sw">Already have an account? <a onclick="switchAuthTab('login')">Login →</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     ORDER HISTORY MODAL
+══════════════════════════════════ -->
+<div class="overlay" id="histModal">
+  <div class="sheet">
+    <div class="drag"></div>
+    <div class="sh-hdr">
+      <div class="sh-title">My Orders</div>
+      <button class="sh-close" onclick="closeModal('histModal')">✕</button>
+    </div>
+    <div class="sh-body" id="histBody">
+      <div class="hist-loading">
+        <div class="hist-loading-spinner"></div>
+        Loading your orders…
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     CHECKOUT MODAL
+══════════════════════════════════ -->
+<div class="overlay" id="chkModal">
+  <div class="sheet">
+    <div class="drag"></div>
+    <div class="sh-hdr">
+      <div class="sh-title" id="chkTitle">Delivery Address</div>
+      <button class="sh-close" onclick="closeModal('chkModal')">✕</button>
+    </div>
+    <div class="step-bar">
+      <div class="pip act" id="pip1"></div>
+      <div class="pip" id="pip2"></div>
+      <div class="pip" id="pip3"></div>
+    </div>
+
+    <!-- STEP 1 -->
+    <div class="sh-body" id="stepAddr">
+      <div class="g2">
+        <div class="fg"><label>Door No *</label><input class="fi" type="text" id="aDoor" placeholder="e.g. 12-A"></div>
+        <div class="fg"><label>House No <span class="opt">(optional)</span></label><input class="fi" type="text" id="aHouseNo" placeholder=""></div>
+      </div>
+      <div class="fg"><label>Street *</label><input class="fi" type="text" id="aStreet" placeholder="Street / Road name"></div>
+      <div class="g2">
+        <div class="fg"><label>Apartment <span class="opt">(opt)</span></label><input class="fi" type="text" id="aApt" placeholder="Apartment name"></div>
+        <div class="fg"><label>Flat No <span class="opt">(opt)</span></label><input class="fi" type="text" id="aFlat" placeholder="Flat no"></div>
+      </div>
+      <div class="fg"><label>Nearest Location *</label><input class="fi" type="text" id="aNearest" placeholder="e.g. Near HDFC Bank"></div>
+      <div class="fg"><label>Landmark *</label><input class="fi" type="text" id="aLandmark" placeholder="e.g. Near water tank"></div>
+      <div class="fg">
+        <label>Delivery Area *</label>
+        <select class="fi" id="aArea" onchange="onAreaChange()">
+          <option value="">— Select your area —</option>
+          <option value="A">Area A – within 5 km (Free delivery)</option>
+          <option value="B">Area B – within 6 km (₹7 delivery charge)</option>
+        </select>
+        <div class="area-box" id="areaBox">
+          <span id="areaText"></span>
+          <span class="a-charge" id="areaChg"></span>
+        </div>
+      </div>
+      <div class="fg"><label>Google Maps Link <span class="opt">(optional)</span></label><input class="fi" type="url" id="aMaps" placeholder="Paste your location link"></div>
+      <button class="btn-dark" onclick="goToPay()">Continue to Payment →</button>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="sh-body" id="stepPay" style="display:none">
+      <div class="pay-grid">
+        <div class="pay-card" id="payQR" onclick="selectPay('QR')">
+          <div class="p-icon">📱</div>
+          <div class="p-name">QR Payment</div>
+          <div class="p-hint">Scan &amp; pay online</div>
+        </div>
+        <div class="pay-card" id="payCOD" onclick="selectPay('COD')">
+          <div class="p-icon">💵</div>
+          <div class="p-name">Cash on Delivery</div>
+          <div class="p-hint">Pay at your door</div>
+        </div>
+      </div>
+      <div class="qr-panel" id="qrPanel">
+        <div class="qr-img" style="padding:0;overflow:hidden;border:2px solid var(--pri-bd);">
+          <img src="C:/Users/arun/OneDrive/Desktop/QR.jpeg" alt="QR Code" style="width:100%;height:100%;object-fit:cover;border-radius:var(--rs);display:block;" onerror="this.style.display='none';this.parentElement.innerHTML+='<span style=\'font-size:48px;display:flex;align-items:center;justify-content:center;width:100%;height:100%\'>⬛</span>'">
+        </div>
+        <div class="qr-amt" id="qrAmt">₹0</div>
+        <div class="qr-note">Scan the QR code and pay the exact amount shown</div>
+        <div class="fg" style="text-align:left">
+          <label>Last 6 digits of Transaction ID</label>
+          <input class="fi" type="text" id="txRef" placeholder="e.g. 482901" maxlength="6"
+                 oninput="this.value=this.value.replace(/\D/g,''); validateTx()">
+        </div>
+      </div>
+      <div class="cbox" id="payConfirm" style="display:none">
+        <div style="font-weight:700;color:var(--ink);margin-bottom:10px;font-size:14px;">Order Summary</div>
+        <div id="confItems"></div>
+        <div class="cr"><span>Subtotal</span><span id="cSub">₹0</span></div>
+        <div class="cr"><span>Delivery</span><span id="cDel">₹0</span></div>
+        <div class="cr tot"><span>Total Payable</span><span id="cTot">₹0</span></div>
+      </div>
+      <button class="btn-spice" id="placeBtn" onclick="placeOrder()" disabled>Place Order</button>
+      <button class="btn-ol" onclick="goToAddr()">← Back to Address</button>
+    </div>
+
+    <!-- STEP 3 — TRACKING -->
+    <div class="sh-body" id="stepTrack" style="display:none">
+      <div class="ord-card">
+        <div class="oc-tag">Order Confirmed</div>
+        <div class="oc-id" id="trkId">ORD-0001</div>
+        <div class="oc-st" id="trkSt">✅ Confirmed</div>
+        <div class="trk-timer">
+          <div class="pulse-dot"></div>
+          Next update in &nbsp;<b id="nextUpd">—</b>
+        </div>
+        <div class="trk-progress-wrap">
+          <div class="trk-progress-bar" id="progressBar"></div>
+        </div>
+      </div>
+
+      <div class="trk-list">
+        <div class="t-step done" id="ts1">
+          <div class="t-dot" id="td1">✓</div>
+          <div class="t-info">
+            <div class="t-lbl">Order Placed</div>
+            <div class="t-sub">We've received your order</div>
+            <div class="t-time on" id="tt1"></div>
+          </div>
+        </div>
+        <div class="t-step" id="ts2">
+          <div class="t-dot" id="td2">🍳</div>
+          <div class="t-info">
+            <div class="t-lbl">Preparing Your Order</div>
+            <div class="t-sub">Your tiffins are being freshly made</div>
+            <div class="t-time" id="tt2"></div>
+            <div class="t-cd" id="cd2"></div>
+          </div>
+        </div>
+        <div class="t-step" id="ts3">
+          <div class="t-dot" id="td3">🛵</div>
+          <div class="t-info">
+            <div class="t-lbl">Out for Delivery</div>
+            <div class="t-sub">Rider is on the way to you</div>
+            <div class="t-time" id="tt3"></div>
+            <div class="t-cd" id="cd3"></div>
+          </div>
+        </div>
+        <div class="t-step" id="ts4">
+          <div class="t-dot" id="td4">🎉</div>
+          <div class="t-info">
+            <div class="t-lbl">Delivered</div>
+            <div class="t-sub">Enjoy your meal!</div>
+            <div class="t-time" id="tt4"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cbox" id="trkSummary"></div>
+      <button class="btn-dark" onclick="closeModal('chkModal'); resetOrder()" style="margin-top:8px">← Back to Menu</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- ══════════════════════════════════
+     JAVASCRIPT
+══════════════════════════════════ -->
+<script>
+
+/* ─── API ─── */
+const API_BASE = 'https://food-delivery-jdu9.onrender.com/api';
+
+/* ─── LOCAL IMAGE MAP ─── */
+const ITEM_IMAGES = {
+  'Dosa':                 'C:/Users/arun/OneDrive/Desktop/dosa.webp',
+  'Ghee Dosa':            'C:/Users/arun/OneDrive/Desktop/Dosa ghee.jpg',
+  'Set Dosa':             'C:/Users/arun/OneDrive/Desktop/set dosa.JPG',
+  'Uthappam':             'C:/Users/arun/OneDrive/Desktop/uttappam.avif',
+  'Karam Dosa':           'C:/Users/arun/OneDrive/Desktop/karaam dosa.jpg',
+  'Ghee Karam Dosa':      'C:/Users/arun/OneDrive/Desktop/ghee karaam dosa.webp',
+  'Masala Dosa':          'C:/Users/arun/OneDrive/Desktop/masala dosa.webp',
+  'Ghee Masala Dosa':     'C:/Users/arun/OneDrive/Desktop/ghee masla dosa.jpg',
+  'Rava Dosa':            'C:/Users/arun/OneDrive/Desktop/rava dosa.webp',
+  'Onion Rava Dosa':      'C:/Users/arun/OneDrive/Desktop/onion-rava-dosa.jpg',
+  'Ghee Rava Dosa':       'C:/Users/arun/OneDrive/Desktop/Dosa ghee.jpg',
+  'Ghee Onion Rava Dosa': 'C:/Users/arun/OneDrive/Desktop/ghee karaam dosa.webp',
+  'Pesarattu':            'C:/Users/arun/OneDrive/Desktop/pesarattu-dosa.jpg',
+  'Ghee Pesarattu':       'C:/Users/arun/OneDrive/Desktop/pesarattu-dosa.jpg',
+  'Onion Pesarattu':      'C:/Users/arun/OneDrive/Desktop/onion pesaratu.jpg',
+  'Egg Dosa':             'C:/Users/arun/OneDrive/Desktop/egg dosa.jpg',
+  'Double Egg Dosa':      'C:/Users/arun/OneDrive/Desktop/double egg dosa.jpg',
+  'Idly':                 'C:/Users/arun/OneDrive/Desktop/idly.jpg',
+  'Podi Idly':            'C:/Users/arun/OneDrive/Desktop/idly.jpg',
+  'Ghee Podi Idly':       'C:/Users/arun/OneDrive/Desktop/idly.jpg',
+  'Vada':                 'C:/Users/arun/OneDrive/Desktop/udi vada.jpg',
+  'Masala Vada':          'C:/Users/arun/OneDrive/Desktop/masala vada.jpg',
+  'Poori':                'C:/Users/arun/OneDrive/Desktop/poori.jpeg',
+};
+const imgCache = ITEM_IMAGES;
+
+/* ─── MARQUEE ─── */
+const MQ_ITEMS = [
+  'Food on your fingertips',
+  'Food available 7 AM – 11 AM  &  4 PM – 11 PM',
+  'No delivery charges up to 5 kms',
+  'We accept party and outdoor caterings',
+  'Fresh tiffins made every morning',
+  'Authentic Guntur & Vijayawada flavours',
+  'Order now and get it in 20 minutes',
+  'Food available 7 AM – 11 AM  &  4 PM – 11 PM',
+];
+(function buildMarquee() {
+  const track = document.getElementById('mqTrack');
+  [...MQ_ITEMS,...MQ_ITEMS].forEach(txt => {
+    const span = document.createElement('span');
+    span.innerHTML = txt;
+    track.appendChild(span);
+  });
+})();
+
+/* ─── FLOATING PARTICLES (video-like effect) ─── */
+(function spawnParticles() {
+  const container = document.getElementById('bgParticles');
+  const colors = ['rgba(26,107,60,0.15)','rgba(200,146,42,0.12)','rgba(46,173,98,0.10)','rgba(224,168,48,0.08)'];
+  for (let i = 0; i < 18; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    const size = Math.random() * 8 + 3;
+    p.style.cssText = `
+      width:${size}px; height:${size}px;
+      left:${Math.random()*100}%;
+      background:${colors[Math.floor(Math.random()*colors.length)]};
+      animation-duration:${Math.random()*20+15}s;
+      animation-delay:${Math.random()*15}s;
+    `;
+    container.appendChild(p);
+  }
+})();
+
+/* ─── MENU DATA ─── */
+const CATS = [
+  {
+    id:'dosa', title:'🫓 Dosa',
+    items:[
+      {id:1,  name:'Dosa',                 desc:'Crispy thin rice & lentil crepe, served with chutney & sambar',             price:50,  veg:true,  emoji:'🫓'},
+      {id:2,  name:'Ghee Dosa',            desc:'Classic dosa generously drizzled with pure cow ghee',                      price:65,  veg:true,  emoji:'✨'},
+      {id:3,  name:'Set Dosa',             desc:'Set of 3 soft fluffy dosas with coconut chutney & sambar',                 price:70,  veg:true,  emoji:'🥞'},
+      {id:4,  name:'Uthappam',             desc:'Thick soft dosa topped with onion, tomato & green chillies',               price:75,  veg:true,  emoji:'🍕'},
+      {id:5,  name:'Karam Dosa',           desc:'Spicy red chutney dosa with bold Andhra masala flavours',                  price:65,  veg:true,  emoji:'🌶️'},
+      {id:6,  name:'Ghee Karam Dosa',      desc:'Spicy karam dosa finished with a generous pour of pure cow ghee',          price:80,  veg:true,  emoji:'🔥'},
+      {id:7,  name:'Masala Dosa',          desc:'Golden dosa stuffed with perfectly spiced potato masala filling',          price:75,  veg:true,  emoji:'🌮'},
+      {id:8,  name:'Ghee Masala Dosa',     desc:'Masala dosa made extra rich with hand-poured pure ghee',                  price:90,  veg:true,  emoji:'🧈'},
+      {id:9,  name:'Rava Dosa',            desc:'Crispy lacy semolina dosa — light, crunchy and delicious',                price:80,  veg:true,  emoji:'🧇'},
+      {id:10, name:'Onion Rava Dosa',      desc:'Rava dosa loaded with fresh crunchy onions and green chillies',           price:90,  veg:true,  emoji:'🧅'},
+      {id:11, name:'Ghee Rava Dosa',       desc:'Crispy rava dosa lavishly finished with pure ghee',                       price:95,  veg:true,  emoji:'💛'},
+      {id:12, name:'Ghee Onion Rava Dosa', desc:'Onion rava dosa enriched with the warmth of pure ghee',                  price:105, veg:true,  emoji:'⭐'},
+      {id:13, name:'Pesarattu',            desc:'Green moong dal crepe — protein-rich Andhra breakfast speciality',         price:65,  veg:true,  emoji:'🟢'},
+      {id:14, name:'Ghee Pesarattu',       desc:'Classic pesarattu elevated with a generous drizzle of ghee',              price:80,  veg:true,  emoji:'💚'},
+      {id:15, name:'Onion Pesarattu',      desc:'Moong dal crepe topped with fresh diced onions and chillies',             price:75,  veg:true,  emoji:'🫚'},
+      {id:16, name:'Egg Dosa',             desc:'Classic dosa topped with a fluffy beaten egg, pan-cooked to perfection',  price:85,  veg:false, emoji:'🥚'},
+      {id:17, name:'Double Egg Dosa',      desc:'Extra generous double-egg dosa for a hearty protein-packed breakfast',    price:110, veg:false, emoji:'🍳'},
+    ]
+  },
+  {
+    id:'idly', title:'⚪ Idly & More',
+    items:[
+      {id:18, name:'Idly',           desc:'Soft steamed rice cakes (2 pcs) served with chutney & sambar',                  price:40,  veg:true,  emoji:'⚪'},
+      {id:19, name:'Podi Idly',      desc:'Idly cubes tossed in spicy gunpowder chutney with a dash of sesame oil',        price:55,  veg:true,  emoji:'🌶️'},
+      {id:20, name:'Ghee Podi Idly', desc:'Podi idly finished with pure ghee — a Tirupati breakfast classic',             price:70,  veg:true,  emoji:'✨'},
+      {id:21, name:'Vada',           desc:'Crispy golden medu vada (2 pcs) with coconut chutney & sambar',                price:50,  veg:true,  emoji:'🍩'},
+      {id:22, name:'Masala Vada',    desc:'Spiced lentil fritter loaded with onion, chilli & fresh coriander',             price:60,  veg:true,  emoji:'🟤'},
+      {id:23, name:'Poori',          desc:'Fluffy deep-fried wheat puffs (2 pcs) served with spiced potato curry',        price:60,  veg:true,  emoji:'🫃'},
+    ]
+  }
+];
+const ALL = CATS.flatMap(c => c.items.map(i => ({...i, catId:c.id})));
+
+/* ─── STATE ─── */
+let cart=[], user=null, payMode=null, selArea=null;
+let _timers=[];
+
+/* ════════════════════════════════════
+   PERSISTENT ORDER STATE (survives X / logout / tab close)
+   Saved to localStorage so the timer always resumes from real elapsed time.
+════════════════════════════════════ */
+const ORD_KEY = 'te_active_order'; /* key in localStorage */
+
+function saveActiveOrder(data) {
+  try { localStorage.setItem(ORD_KEY, JSON.stringify(data)); } catch(e) {}
+}
+function loadActiveOrder() {
+  try { const s=localStorage.getItem(ORD_KEY); return s?JSON.parse(s):null; } catch(e){ return null; }
+}
+function clearActiveOrder() {
+  try { localStorage.removeItem(ORD_KEY); } catch(e) {}
+}
+
+/* ─── INIT ─── */
+window.addEventListener('DOMContentLoaded', () => {
+  const s = sessionStorage.getItem('te_u');
+  if (s) { user = JSON.parse(s); syncUserUI(); }
+  try {
+    const saved = localStorage.getItem('te_cart');
+    if (saved) { cart = JSON.parse(saved); updateBar(); }
+  } catch(e) { cart = []; }
+  renderAll();
+
+  /* ── Resume any active order timer that was running before ── */
+  const ao = loadActiveOrder();
+  if (ao && ao.startTs && ao.orderNumber) {
+    const elapsed = Math.floor((Date.now() - ao.startTs) / 1000);
+    if (elapsed < TOTAL_SECS) {
+      /* Order still in progress — silently resume the background timer.
+         The UI will reflect correct state when user opens Track Order. */
+      _resumeBackgroundTimer(ao.startTs, ao.orderNumber, ao.receipt, ao.payMode);
+    } else {
+      /* Order already completed while away — mark delivered */
+      saveActiveOrder({ ...ao, completed: true });
+    }
+  }
+});
+
+/* ─── RENDER MENU ─── */
+function renderAll() {
+  const main = document.getElementById('mainContent');
+  main.querySelectorAll('.cat-block').forEach(e => e.remove());
+  CATS.forEach(cat => main.insertBefore(buildCat(cat, cat.items), document.getElementById('noRes')));
+  document.getElementById('noRes').style.display = 'none';
+}
+
+function buildCat(cat, items) {
+  const d = document.createElement('div');
+  d.className = 'cat-block'; d.id = `cat-${cat.id}`;
+  const col = cat.id === 'dosa' ? 'var(--pri)' : 'var(--gold)';
+  d.innerHTML = `
+    <div class="cat-head">
+      <div class="cat-accent"></div>
+      <div class="cat-title" style="color:${col}">${cat.title}</div>
+      <div class="cat-rule"></div>
+      <div class="cat-count">${items.length} items</div>
+    </div>
+    <div class="menu-grid" id="grid-${cat.id}"></div>`;
+  const grid = d.querySelector(`#grid-${cat.id}`);
+  items.forEach(item => grid.appendChild(buildCard(item, cat.id)));
+  return d;
+}
+
+function buildCard(item, catId) {
+  const d = document.createElement('div');
+  d.className = `menu-card cat-${catId}`; d.id = `card-${item.id}`;
+  const ci = cart.find(c => c.id === item.id);
+  d.innerHTML = `
+    <div class="c-thumb" id="thumb-${item.id}">
+      <div class="c-emoji">${item.emoji}</div>
+      <img src="" alt="${item.name}" style="display:none"
+           onload="this.style.display='';this.parentElement.classList.add('loaded')"
+           onerror="this.style.display=''">
+      <div class="veg-badge ${item.veg ? 'vb-veg' : 'vb-nv'}">
+        <div class="vb-dot"></div>${item.veg ? 'VEG' : 'NON-VEG'}
+      </div>
+    </div>
+    <div class="c-body">
+      <div class="c-name">${item.name}</div>
+      <div class="c-desc">${item.desc}</div>
+      <div class="c-footer">
+        <div class="c-price">₹${item.price} <small>/plate</small></div>
+        <div id="act-${item.id}">${actHTML(item.id, ci ? ci.qty : 0)}</div>
+      </div>
+    </div>`;
+  const localImg = ITEM_IMAGES[item.name] || '';
+  if (localImg) {
+    const imgEl = d.querySelector('img');
+    if (imgEl) { imgEl.src = localImg; imgEl.style.display = ''; }
+  }
+  return d;
+}
+
+function actHTML(id, qty) {
+  if (qty > 0) return `<div class="qty-ctrl">
+    <button class="q-btn" onclick="chgQty(${id},-1)">−</button>
+    <span class="q-num">${qty}</span>
+    <button class="q-btn" onclick="chgQty(${id},1)">+</button>
+  </div>`;
+  return `<button class="add-btn" onclick="addItem(${id})">ADD</button>`;
+}
+
+function refreshAct(id) {
+  const el = document.getElementById(`act-${id}`);
+  if (!el) return;
+  const ci = cart.find(c => c.id === id);
+  el.innerHTML = actHTML(id, ci ? ci.qty : 0);
+}
+
+/* ─── SEARCH ─── */
+function filterMenu() {
+  const q = document.getElementById('searchInput').value.toLowerCase().trim();
+  const main = document.getElementById('mainContent');
+  main.querySelectorAll('.cat-block').forEach(e => e.remove());
+  if (!q) { document.getElementById('noRes').style.display='none'; renderAll(); return; }
+  let found = false;
+  CATS.forEach(cat => {
+    const matched = cat.items.filter(i => i.name.toLowerCase().includes(q) || i.desc.toLowerCase().includes(q));
+    if (matched.length) { found=true; main.insertBefore(buildCat(cat,matched), document.getElementById('noRes')); }
+  });
+  document.getElementById('noRes').style.display = found ? 'none' : 'block';
+}
+
+/* ─── CART LOGIC ─── */
+function saveCart() {
+  try { localStorage.setItem('te_cart', JSON.stringify(cart)); } catch(e) {}
+}
+function addItem(id) {
+  const item = ALL.find(i => i.id === id);
+  cart.push({id:item.id, name:item.name, price:item.price, qty:1, emoji:item.emoji});
+  refreshAct(id); updateBar(); saveCart(); showToast(`${item.name} added to cart!`);
+}
+function chgQty(id, delta) {
+  const idx = cart.findIndex(c => c.id === id);
+  if (idx === -1) return;
+  cart[idx].qty += delta;
+  if (cart[idx].qty <= 0) cart.splice(idx,1);
+  refreshAct(id); updateBar(); updateCartSheet(); saveCart();
+}
+function totQty()   { return cart.reduce((s,i) => s+i.qty, 0); }
+function subTotal() { return cart.reduce((s,i) => s+i.price*i.qty, 0); }
+function delFee()   { return selArea==='A' ? 0 : selArea==='B' ? 7 : null; }
+
+function updateBar() {
+  const qty = totQty();
+  const n = document.getElementById('cartN');
+  const bar = document.getElementById('chkBar');
+  if (qty > 0) {
+    n.textContent=qty; n.classList.add('on'); bar.classList.add('on');
+    document.getElementById('barItems').textContent = `${qty} Item${qty>1?'s':''}`;
+    document.getElementById('barTotal').textContent = `₹${subTotal()}`;
+  } else { n.classList.remove('on'); bar.classList.remove('on'); }
+}
+
+/* ─── CART SHEET ─── */
+function openCart() { updateCartSheet(); openModal('cartModal'); }
+
+function updateCartSheet() {
+  const wrap=document.getElementById('cartWrap'),
+        sumBox=document.getElementById('sumBox'),
+        warn=document.getElementById('minWarn'),
+        btn=document.getElementById('chkBtn');
+  if (!cart.length) {
+    wrap.innerHTML=`<div class="empty-st"><div class="ei">🛒</div><h3>Your cart is empty</h3><p>Add some delicious tiffins to get started!</p></div>`;
+    sumBox.style.display='none'; warn.classList.remove('on'); btn.disabled=true; return;
+  }
+  wrap.innerHTML = cart.map(it => {
+    const imgUrl = imgCache[it.name] || '';
+    const thumbInner = imgUrl
+      ? `<img src="${imgUrl}" alt="${it.name}" style="width:100%;height:100%;object-fit:cover;border-radius:10px">`
+      : `<span class="cart-thumb-emoji">${it.emoji}</span>`;
+    return `
+    <div class="cart-row">
+      <div class="cart-thumb">${thumbInner}</div>
+      <div style="flex:1;min-width:0">
+        <div class="cart-name">${it.name}</div>
+        <div class="cart-price">₹${it.price} × ${it.qty} = <strong>₹${it.price*it.qty}</strong></div>
+      </div>
+      <div class="qty-ctrl" style="scale:.88">
+        <button class="q-btn" onclick="chgQty(${it.id},-1)">−</button>
+        <span class="q-num">${it.qty}</span>
+        <button class="q-btn" onclick="chgQty(${it.id},1)">+</button>
+      </div>
+    </div>`;
+  }).join('');
+  const sub=subTotal(), del=delFee();
+  document.getElementById('sumSub').textContent=`₹${sub}`;
+  document.getElementById('sumDel').textContent=del!==null?(del===0?'FREE':`₹${del}`):'—';
+  document.getElementById('sumTot').textContent=`₹${del!==null?sub+del:sub}`;
+  sumBox.style.display='block';
+  if (totQty()<2) { warn.classList.add('on'); btn.disabled=true; }
+  else            { warn.classList.remove('on'); btn.disabled=false; }
+}
+
+/* ─── AUTH MODAL ─── */
+function openAuth() { switchAuthTab('login'); openModal('authModal'); }
+
+function switchAuthTab(tab) {
+  const isLogin = tab === 'login';
+  document.getElementById('tabLogin').classList.toggle('active', isLogin);
+  document.getElementById('tabSignup').classList.toggle('active', !isLogin);
+  document.getElementById('loginForm').style.display = isLogin ? 'block' : 'none';
+  document.getElementById('signupForm').style.display = isLogin ? 'none' : 'block';
+}
+
+function togglePwd(id,btn) {
+  const inp=document.getElementById(id);
+  inp.type = inp.type==='password' ? 'text' : 'password';
+  btn.textContent = inp.type==='password' ? '👁️' : '🙈';
+}
+
+/* ════════════════════════════════════
+   LOGIN — fast, no artificial delay
+════════════════════════════════════ */
+async function doLogin() {
+  const phone=document.getElementById('lPhone').value.trim();
+  const pass=document.getElementById('lPass').value.trim();
+  if (!/^\d{10}$/.test(phone)) { showToast('Enter a valid 10-digit phone number'); return; }
+  if (!pass) { showToast('Please enter your password'); return; }
+  const btn = document.getElementById('loginSubmitBtn');
+  const origText = btn.textContent;
+  btn.disabled = true; btn.classList.add('btn-loading'); btn.textContent = '';
+  try {
+    /* AbortController gives us a 8-second hard timeout max */
+    const ctrl = new AbortController();
+    const tid = setTimeout(() => ctrl.abort(), 8000);
+    const res = await fetch(`${API_BASE}/auth/login`, {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({phone, password:pass}),
+      signal: ctrl.signal
+    });
+    clearTimeout(tid);
+    const data = await res.json();
+    if (!res.ok) {
+      btn.disabled=false; btn.classList.remove('btn-loading'); btn.textContent=origText;
+      showToast(data.message || 'Login failed'); return;
+    }
+    user = {name:data.user_name, phone:data.user_phone, token:data.token};
+    sessionStorage.setItem('te_u', JSON.stringify(user));
+    syncUserUI(); closeModal('authModal');
+    btn.disabled=false; btn.classList.remove('btn-loading'); btn.textContent=origText;
+    showToast(`Welcome back, ${user.name}! 👋`);
+  } catch(e) {
+    btn.disabled=false; btn.classList.remove('btn-loading'); btn.textContent=origText;
+    showToast(e.name==='AbortError' ? 'Request timed out — please try again' : 'Network error — please try again');
+  }
+}
+
+/* ════════════════════════════════════
+   SIGNUP — fast, no artificial delay
+════════════════════════════════════ */
+async function doSignup() {
+  const name=document.getElementById('sName').value.trim();
+  const phone=document.getElementById('sPhone').value.trim();
+  const email=document.getElementById('sEmail').value.trim();
+  const pass=document.getElementById('sPass').value;
+  const conf=document.getElementById('sConf').value;
+  if (!name)                   { showToast('Please enter your name'); return; }
+  if (!/^\d{10}$/.test(phone)) { showToast('Enter a valid 10-digit phone number'); return; }
+  if (!email.includes('@'))    { showToast('Enter a valid email address'); return; }
+  if (pass.length<6)           { showToast('Password must be at least 6 characters'); return; }
+  if (pass!==conf)             { showToast('Passwords do not match'); return; }
+  const btn = document.getElementById('signupSubmitBtn');
+  const origText = btn.textContent;
+  btn.disabled = true; btn.classList.add('btn-loading'); btn.textContent = '';
+  try {
+    const ctrl = new AbortController();
+    const tid = setTimeout(() => ctrl.abort(), 8000);
+    const res = await fetch(`${API_BASE}/auth/register`, {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({name, phone, email, password:pass}),
+      signal: ctrl.signal
+    });
+    clearTimeout(tid);
+    const data = await res.json();
+    if (!res.ok) {
+      btn.disabled=false; btn.classList.remove('btn-loading'); btn.textContent=origText;
+      showToast(data.message || 'Registration failed'); return;
+    }
+    /* Auto-login immediately after register */
+    const ctrl2 = new AbortController();
+    const tid2 = setTimeout(() => ctrl2.abort(), 8000);
+    const lr = await fetch(`${API_BASE}/auth/login`, {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({phone, password:pass}),
+      signal: ctrl2.signal
+    });
+    clearTimeout(tid2);
+    const ld = await lr.json();
+    btn.disabled=false; btn.classList.remove('btn-loading'); btn.textContent=origText;
+    if (!lr.ok) { showToast('Account created! Please login.'); switchAuthTab('login'); return; }
+    user = {name:ld.user_name, phone:ld.user_phone, token:ld.token};
+    sessionStorage.setItem('te_u', JSON.stringify(user));
+    syncUserUI(); closeModal('authModal');
+    showToast(`Welcome, ${user.name}! 🎉`);
+  } catch(e) {
+    btn.disabled=false; btn.classList.remove('btn-loading'); btn.textContent=origText;
+    showToast(e.name==='AbortError' ? 'Request timed out — please try again' : 'Network error — please try again');
+  }
+}
+
+async function doLogout() {
+  try {
+    if (user && user.token) {
+      await fetch(`${API_BASE}/auth/logout`, {
+        method:'POST', headers:{'Authorization': user.token}
+      });
+    }
+  } catch(e) {}
+  /* NOTE: We intentionally do NOT clearActiveOrder() here.
+     If the user logs back in, the timer resumes from where it left off. */
+  user=null; sessionStorage.removeItem('te_u'); syncUserUI(); showToast('Logged out successfully.');
+}
+
+function syncUserUI() {
+  const loginBtn  = document.getElementById('loginBtn');
+  const uc        = document.getElementById('userChip');
+  const ordersBtn = document.getElementById('ordersBtn');
+  const lc        = document.getElementById('logoutChip');
+  const av        = document.getElementById('uAvatar');
+  const unm       = document.getElementById('uName');
+  if (user) {
+    loginBtn.classList.add('hidden');
+    av.textContent=user.name.charAt(0).toUpperCase(); unm.textContent=user.name;
+    uc.classList.add('on'); ordersBtn.classList.add('on'); lc.classList.add('on');
+  } else {
+    loginBtn.classList.remove('hidden');
+    uc.classList.remove('on'); ordersBtn.classList.remove('on'); lc.classList.remove('on');
+  }
+}
+
+/* ─── ORDER HISTORY — fast fetch ─── */
+async function openOrderHistory() {
+  openModal('histModal');
+  const body = document.getElementById('histBody');
+
+  if (!user) {
+    body.innerHTML = `
+      <div class="hist-empty">
+        <div class="hi">🔒</div>
+        <p style="font-size:15px;font-weight:600;color:var(--ink);margin-bottom:8px;">Login to see your orders</p>
+        <p style="font-size:13px;color:var(--muted);margin-bottom:20px;">Your order history will appear here after you login.</p>
+        <button class="btn-spice" style="max-width:220px;margin:0 auto" onclick="closeModal('histModal'); openAuth();">Login / Create Account →</button>
+      </div>`;
+    return;
+  }
+
+  /* Show fast spinner — no "Loading…" text delay */
+  body.innerHTML = '<div class="hist-loading"><div class="hist-loading-spinner"></div>Fetching orders…</div>';
+
+  try {
+    /* Fast 6-second timeout */
+    const ctrl = new AbortController();
+    const tid = setTimeout(() => ctrl.abort(), 6000);
+    const res = await fetch(`${API_BASE}/orders/my`, {
+      headers:{'Authorization': user.token},
+      signal: ctrl.signal
+    });
+    clearTimeout(tid);
+    const data = await res.json();
+    if (!res.ok) { body.innerHTML = '<div class="hist-loading">Could not load orders.</div>'; return; }
+    const orders = data.orders || [];
+    if (!orders.length) {
+      body.innerHTML = `<div class="hist-empty"><div class="hi">🍽️</div><p>You haven't placed any orders yet.<br>Go ahead and order some delicious tiffins!</p></div>`;
+      return;
+    }
+
+    const statusLabel = {
+      placed:'🟡 Order Placed', preparing:'🟠 Preparing',
+      out_for_delivery:'🟢 Out for Delivery', delivered:'✅ Delivered'
+    };
+    const statusClass = {
+      placed:'placed', preparing:'preparing',
+      out_for_delivery:'out', delivered:'delivered'
+    };
+
+    body.innerHTML = orders.map(o => {
+      const itemsText = (o.items||[]).map(i=>`${i.name} ×${i.quantity}`).join(', ');
+      const dateStr   = o.created_at ? new Date(o.created_at).toLocaleString('en-IN',{dateStyle:'medium',timeStyle:'short'}) : '';
+      const stLabel   = statusLabel[o.order_status] || o.order_status;
+      const stClass   = statusClass[o.order_status] || 'placed';
+      const canTrack  = o.order_status !== 'delivered';
+      return `
+      <div class="ord-hist-card">
+        <div class="oh-top">
+          <div>
+            <div class="oh-num">${o.order_number}</div>
+            <div class="oh-date">${dateStr}</div>
+          </div>
+          <span class="oh-status ${stClass}">${stLabel}</span>
+        </div>
+        <div class="oh-items">${itemsText}</div>
+        <div class="oh-footer">
+          <div>
+            <div class="oh-total">₹${o.final_total}</div>
+            <div class="oh-pay">${o.payment_mode} · ${o.area}</div>
+          </div>
+          ${canTrack ? `<button class="track-again-btn" onclick="trackExistingOrder('${o.order_number}','${o.order_status}')">Track Order →</button>` : '<span style="font-size:12px;color:var(--muted)">Delivered ✓</span>'}
+        </div>
+      </div>`;
+    }).join('');
+  } catch(e) {
+    body.innerHTML = `<div class="hist-loading">${e.name==='AbortError'?'Request timed out.':'Network error.'} Please try again.</div>`;
+  }
+}
+
+/* ─── TRACK EXISTING ORDER — resumes from localStorage if same order ─── */
+function trackExistingOrder(orderNumber, currentStatus) {
+  closeModal('histModal');
+
+  /* Check if this is our actively tracked order in localStorage */
+  const ao = loadActiveOrder();
+  if (ao && ao.orderNumber === orderNumber && ao.startTs) {
+    const elapsed = Math.floor((Date.now() - ao.startTs) / 1000);
+    if (elapsed < TOTAL_SECS) {
+      /* Resume live timer for this order */
+      setStep(3);
+      openModal('chkModal');
+      document.getElementById('trkId').textContent = orderNumber;
+      if (ao.receipt) _applyReceipt(ao.receipt, ao.payMode);
+      _resumeBackgroundTimer(ao.startTs, orderNumber, ao.receipt, ao.payMode);
+      return;
+    }
+  }
+
+  /* Fallback: show static status from server response */
+  setStep(3);
+  openModal('chkModal');
+  document.getElementById('trkId').textContent = orderNumber;
+
+  const stageMap = {
+    placed:           {label:'✅ Confirmed',         stage:1},
+    preparing:        {label:'🍳 Preparing',          stage:2},
+    out_for_delivery: {label:'🛵 Out for Delivery',   stage:3},
+    delivered:        {label:'✅ Delivered',          stage:4},
+  };
+  const info = stageMap[currentStatus] || {label:'✅ Confirmed', stage:1};
+  document.getElementById('trkSt').textContent = info.label;
+
+  for (let i=1; i<=4; i++) {
+    const s=document.getElementById(`ts${i}`); const d=document.getElementById(`td${i}`);
+    if (s) s.className='t-step';
+    const emojis=['','✓','🍳','🛵','🎉'];
+    if (d) d.textContent=emojis[i];
+  }
+  for (let i=1; i<=info.stage; i++) {
+    const s=document.getElementById(`ts${i}`); const d=document.getElementById(`td${i}`);
+    if (s){ s.className='t-step done'; }
+    if (d) d.textContent='✓';
+  }
+  if (info.stage < 4) {
+    const ns=document.getElementById(`ts${info.stage+1}`);
+    if (ns) ns.classList.add('active');
+  }
+
+  document.getElementById('trkSummary').innerHTML = `
+    <div style="font-size:13px;color:var(--muted);text-align:center;padding:10px 0">
+      Order <b>${orderNumber}</b> — tracking live status.<br>
+      Refresh "My Orders" for latest updates.
+    </div>`;
+
+  document.getElementById('nextUpd').textContent = 'Live';
+  document.getElementById('progressBar').style.width =
+    ({placed:'5%',preparing:'35%',out_for_delivery:'70%',delivered:'100%'}[currentStatus]) || '5%';
+}
+
+/* ─── CHECKOUT FLOW ─── */
+function proceedCheckout() {
+  if (totQty()<2) { showToast('Minimum 2 items required to checkout!'); return; }
+  closeModal('cartModal');
+  if (!user) { openAuth(); return; }
+  openChkModal();
+}
+function openChkModal() { setStep(1); openModal('chkModal'); }
+
+function setStep(n) {
+  document.getElementById('stepAddr').style.display  = n===1?'block':'none';
+  document.getElementById('stepPay').style.display   = n===2?'block':'none';
+  document.getElementById('stepTrack').style.display = n===3?'block':'none';
+  document.getElementById('chkTitle').textContent = ['Delivery Address','Payment','Order Tracking'][n-1];
+  [1,2,3].forEach(i => {
+    const pip=document.getElementById(`pip${i}`);
+    pip.className='pip'+(i===n?' act':i<n?' dn':'');
+  });
+}
+
+function onAreaChange() {
+  const area=document.getElementById('aArea').value;
+  selArea=area||null;
+  const box=document.getElementById('areaBox');
+  if (area==='A') {
+    document.getElementById('areaText').textContent='📍 Area A – within 5 km';
+    document.getElementById('areaChg').textContent='FREE delivery';
+    box.classList.add('on');
+  } else if (area==='B') {
+    document.getElementById('areaText').textContent='📍 Area B – within 6 km';
+    document.getElementById('areaChg').textContent='Delivery ₹7';
+    box.classList.add('on');
+  } else { box.classList.remove('on'); }
+  updateBar(); updateCartSheet();
+}
+
+function goToPay() {
+  if (!document.getElementById('aDoor').value.trim())    { showToast('Door No is required'); return; }
+  if (!document.getElementById('aStreet').value.trim())  { showToast('Street is required'); return; }
+  if (!document.getElementById('aNearest').value.trim()) { showToast('Nearest Location is required'); return; }
+  if (!document.getElementById('aLandmark').value.trim()){ showToast('Landmark is required'); return; }
+  if (!document.getElementById('aArea').value)           { showToast('Please select your delivery area'); return; }
+  setStep(2); fillConfirm();
+  document.getElementById('payConfirm').style.display='block';
+  document.getElementById('placeBtn').disabled=true;
+}
+function goToAddr() {
+  setStep(1); payMode=null;
+  document.getElementById('payQR').classList.remove('sel');
+  document.getElementById('payCOD').classList.remove('sel');
+  document.getElementById('qrPanel').classList.remove('on');
+}
+function fillConfirm() {
+  const del=delFee(), sub=subTotal(), tot=sub+(del!==null?del:0);
+  document.getElementById('confItems').innerHTML =
+    cart.map(i=>`<div class="cr"><span>${i.name} ×${i.qty}</span><span>₹${i.price*i.qty}</span></div>`).join('');
+  document.getElementById('cSub').textContent=`₹${sub}`;
+  document.getElementById('cDel').textContent=del===0?'FREE':`₹${del}`;
+  document.getElementById('cTot').textContent=`₹${tot}`;
+  document.getElementById('qrAmt').textContent=`₹${tot}`;
+}
+function selectPay(mode) {
+  payMode=mode;
+  document.getElementById('payQR').classList.toggle('sel',mode==='QR');
+  document.getElementById('payCOD').classList.toggle('sel',mode==='COD');
+  if (mode==='QR') {
+    document.getElementById('qrPanel').classList.add('on');
+    document.getElementById('placeBtn').disabled=true;
+    document.getElementById('txRef').value='';
+  } else {
+    document.getElementById('qrPanel').classList.remove('on');
+    document.getElementById('placeBtn').disabled=false;
+  }
+}
+function validateTx() {
+  document.getElementById('placeBtn').disabled = document.getElementById('txRef').value.length !== 6;
+}
+
+/* ════════════════════════════════════
+   ORDER STAGE TIMER ENGINE
+   T+0    → Order Placed  (instant)
+   T+60s  → Preparing     (1 minute)
+   T+600s → Out Delivery  (10 minutes)
+   T+1200s→ Delivered     (20 minutes)
+
+   The startTs is persisted in localStorage so the timer survives:
+     • Closing the modal (X button)
+     • Logging out
+     • Closing and reopening the browser tab
+   When the user reopens the tracking view, renderTrackingUI() reads the
+   saved startTs and rebuilds the correct state instantly.
+════════════════════════════════════ */
+const STAGE_DELAYS = [0, 60, 600, 1200]; /* seconds */
+const TOTAL_SECS   = 1200;               /* 20 minutes */
+
+const STAGE_LABELS = ['','✅ Confirmed','🍳 Preparing','🛵 Out for Delivery','✅ Delivered'];
+const STAGE_TOASTS = ['','','🍳 Your order is being prepared!','🛵 Rider is on the way!','🎉 Order delivered! Enjoy your meal!'];
+
+function clearTimers() { _timers.forEach(t => clearInterval(t)); _timers=[]; }
+
+function fmtTime(s) {
+  if (s <= 0) return '0s';
+  const m=Math.floor(s/60), r=s%60;
+  return m>0 ? (r>0 ? `${m}m ${r}s` : `${m}m`) : `${r}s`;
+}
+
+function stampTime(elId, ts) {
+  const el=document.getElementById(elId);
+  if (!el) return;
+  const d = ts ? new Date(ts) : new Date();
+  el.textContent = `🕐 ${d.getHours().toString().padStart(2,'0')}:${d.getMinutes().toString().padStart(2,'0')}`;
+  el.classList.add('on');
+}
+
+/* Compute which stage we are in given elapsed seconds */
+function stageFromElapsed(elapsed) {
+  if (elapsed >= STAGE_DELAYS[3]) return 4;
+  if (elapsed >= STAGE_DELAYS[2]) return 3;
+  if (elapsed >= STAGE_DELAYS[1]) return 2;
+  return 1;
+}
+
+/* ── Apply full tracking UI based on elapsed seconds (idempotent) ── */
+function renderTrackingUI(startTs, showToasts) {
+  const elapsed = Math.floor((Date.now() - startTs) / 1000);
+  const stage   = stageFromElapsed(elapsed);
+  const pct     = Math.min(100, (elapsed / TOTAL_SECS) * 100);
+
+  const barEl = document.getElementById('progressBar');
+  const stEl  = document.getElementById('trkSt');
+  const nuEl  = document.getElementById('nextUpd');
+
+  if (barEl) barEl.style.width = pct + '%';
+
+  /* Reset all steps */
+  for (let i=1;i<=4;i++) {
+    const s=document.getElementById(`ts${i}`); const d=document.getElementById(`td${i}`);
+    const cd=document.getElementById(`cd${i}`);
+    if (s) s.className='t-step';
+    if (cd){ cd.classList.remove('on'); cd.textContent=''; }
+    /* restore default emoji for incomplete steps */
+    const emojis=['','✓','🍳','🛵','🎉'];
+    if (d) d.textContent = emojis[i];
+  }
+
+  /* Mark all completed stages as done */
+  for (let i=1; i<stage; i++) {
+    const s=document.getElementById(`ts${i}`); const d=document.getElementById(`td${i}`);
+    if (s){ s.classList.remove('active'); s.classList.add('done'); }
+    if (d) d.textContent='✓';
+    /* stamp time for done steps — approximate from startTs + stage delay */
+    const tEl=document.getElementById(`tt${i}`);
+    if (tEl && !tEl.classList.contains('on')) {
+      const ts = startTs + STAGE_DELAYS[i-1]*1000;
+      stampTime(`tt${i}`, ts);
+    }
+  }
+
+  if (stage <= 4) {
+    /* Mark stage 1 done if we're past it */
+    if (stage > 1) {
+      const s1=document.getElementById('ts1'); if(s1){ s1.classList.add('done'); }
+      const d1=document.getElementById('td1'); if(d1) d1.textContent='✓';
+      if (!document.getElementById('tt1').classList.contains('on')) stampTime('tt1', startTs);
+    } else {
+      /* Stage 1 is always done immediately after placing */
+      const s1=document.getElementById('ts1'); if(s1){ s1.classList.add('done'); }
+      const d1=document.getElementById('td1'); if(d1) d1.textContent='✓';
+      if (!document.getElementById('tt1').classList.contains('on')) stampTime('tt1', startTs);
+    }
+  }
+
+  if (stage < 4) {
+    /* Activate current stage */
+    const curS=document.getElementById(`ts${stage}`);
+    if (curS){ curS.classList.remove('done'); curS.classList.add('active'); }
+    if (stEl) stEl.textContent = STAGE_LABELS[stage];
+
+    /* Countdown for current stage */
+    const nextDelay = STAGE_DELAYS[stage];
+    const remaining = nextDelay - elapsed;
+    if (nuEl) nuEl.textContent = fmtTime(remaining);
+
+    /* cd labels */
+    if (stage===1) {
+      const cd2=document.getElementById('cd2');
+      if (cd2){ cd2.classList.add('on'); cd2.textContent=`⏱ Preparing in ${fmtTime(remaining)}`; }
+    } else if (stage===2) {
+      const cd3=document.getElementById('cd3');
+      if (cd3){ cd3.classList.add('on'); cd3.textContent=`⏱ Pickup in ${fmtTime(remaining)}`; }
+    } else if (stage===3) {
+      const cd3=document.getElementById('cd3');
+      if (cd3){ cd3.classList.add('on'); cd3.textContent=`⏱ Delivery in ${fmtTime(remaining)}`; }
+    }
+  } else {
+    /* All done */
+    const s4=document.getElementById('ts4'); if(s4) s4.classList.add('done');
+    const d4=document.getElementById('td4'); if(d4) d4.textContent='✓';
+    if (!document.getElementById('tt4').classList.contains('on')) {
+      stampTime('tt4', startTs + STAGE_DELAYS[3]*1000);
+    }
+    if (stEl) stEl.textContent = STAGE_LABELS[4];
+    if (barEl) barEl.style.width='100%';
+    if (nuEl)  nuEl.textContent='Done ✓';
+    const tw=document.querySelector('.trk-timer'); if (tw) tw.style.opacity='0.4';
+  }
+}
+
+/* ── Background interval that keeps running even when modal is closed ──
+   It does NOT touch the DOM unless the tracking modal is open.
+   But it DOES show toasts when stages change, even if modal is closed.   */
+function _resumeBackgroundTimer(startTs, orderNumber, receipt, pMode) {
+  clearTimers(); /* safety — only one timer at a time */
+
+  let lastStage = stageFromElapsed(Math.floor((Date.now()-startTs)/1000));
+
+  /* If modal is already open with tracking, render immediately */
+  const modal = document.getElementById('chkModal');
+  if (modal && modal.classList.contains('on')) {
+    const trkIdEl = document.getElementById('trkId');
+    if (trkIdEl) trkIdEl.textContent = orderNumber;
+    if (receipt) _applyReceipt(receipt, pMode);
+    renderTrackingUI(startTs, false);
+  }
+
+  function tick() {
+    const elapsed = Math.floor((Date.now()-startTs)/1000);
+    const stage   = stageFromElapsed(elapsed);
+
+    /* Detect stage transitions — show toast even if modal closed */
+    if (stage !== lastStage) {
+      if (STAGE_TOASTS[stage]) showToast(STAGE_TOASTS[stage]);
+      /* Update saved state */
+      const ao = loadActiveOrder();
+      if (ao) saveActiveOrder({...ao, lastStage: stage});
+      lastStage = stage;
+    }
+
+    /* Only update DOM if tracking modal is currently visible */
+    const m = document.getElementById('chkModal');
+    const trackingVisible = m && m.classList.contains('on') &&
+                            document.getElementById('stepTrack').style.display !== 'none';
+    if (trackingVisible) {
+      renderTrackingUI(startTs, false);
+    }
+
+    /* Stop when delivered */
+    if (elapsed >= TOTAL_SECS) {
+      clearTimers();
+      clearActiveOrder(); /* order complete — remove persisted state */
+      /* Final DOM update if modal open */
+      if (trackingVisible) renderTrackingUI(startTs, false);
+    }
+  }
+
+  const iv = setInterval(tick, 1000);
+  _timers.push(iv);
+  tick(); /* immediate first tick */
+}
+
+function _applyReceipt(receipt, pMode) {
+  const el = document.getElementById('trkSummary');
+  if (!el) return;
+  el.innerHTML=`
+    <div style="font-weight:700;color:var(--ink);margin-bottom:10px;font-size:14px;">Receipt</div>
+    ${receipt.items.map(i=>`<div class="cr"><span>${i.name} ×${i.qty}</span><span>₹${i.price*i.qty}</span></div>`).join('')}
+    <div class="cr"><span>Subtotal</span><span>₹${receipt.sub}</span></div>
+    <div class="cr"><span>Delivery</span><span>${receipt.del===0?'FREE':'₹'+receipt.del}</span></div>
+    <div class="cr"><span>Payment</span><span>${pMode}</span></div>
+    <div class="cr tot"><span>Total</span><span>₹${receipt.tot}</span></div>`;
+}
+
+/* ── Called when user opens Track Order from history or modal ── */
+function openTrackingFromSaved() {
+  const ao = loadActiveOrder();
+  if (!ao || !ao.startTs) return false;
+
+  setStep(3);
+  openModal('chkModal');
+  document.getElementById('trkId').textContent = ao.orderNumber;
+  document.getElementById('trkSt').textContent = '✅ Confirmed';
+  if (ao.receipt) _applyReceipt(ao.receipt, ao.payMode);
+
+  const elapsed = Math.floor((Date.now() - ao.startTs) / 1000);
+  if (elapsed < TOTAL_SECS) {
+    _resumeBackgroundTimer(ao.startTs, ao.orderNumber, ao.receipt, ao.payMode);
+  } else {
+    renderTrackingUI(ao.startTs, false);
+  }
+  return true;
+}
+
+async function placeOrder() {
+  if (!payMode) { showToast('Please select a payment method'); return; }
+  if (payMode==='QR' && !/^\d{6}$/.test(document.getElementById('txRef').value)) {
+    showToast('Enter a valid 6-digit transaction ID'); return;
+  }
+  if (!user || !user.token) { showToast('Please login to place order'); return; }
+  clearTimers();
+
+  const areaMap={A:'Area A',B:'Area B'};
+  const payload={
+    items: cart.map(i=>({name:i.name, price:i.price, quantity:i.qty})),
+    address:{
+      door_no:          document.getElementById('aDoor').value.trim(),
+      house_no:         document.getElementById('aHouseNo').value.trim()||undefined,
+      street:           document.getElementById('aStreet').value.trim(),
+      apartment_name:   document.getElementById('aApt').value.trim()||undefined,
+      flat_no:          document.getElementById('aFlat').value.trim()||undefined,
+      nearest_location: document.getElementById('aNearest').value.trim(),
+      landmark:         document.getElementById('aLandmark').value.trim(),
+      maps_link:        document.getElementById('aMaps').value.trim()||undefined,
+    },
+    area:         areaMap[selArea]||selArea,
+    payment_mode: payMode,
+    transaction_ref: payMode==='QR'?document.getElementById('txRef').value.trim():undefined,
+  };
+
+  try {
+    showToast('Placing your order…');
+    const ctrl = new AbortController();
+    const tid = setTimeout(() => ctrl.abort(), 10000);
+    const res=await fetch(`${API_BASE}/orders`,{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Authorization':user.token},
+      body:JSON.stringify(payload),
+      signal: ctrl.signal
+    });
+    clearTimeout(tid);
+    const data=await res.json();
+    if (!res.ok) { showToast(data.message||'Order failed — please try again'); return; }
+
+    const oid=data.order_number, sub=data.subtotal, del=data.delivery, tot=data.final_total;
+    const startTs = Date.now();
+
+    /* Build receipt snapshot for persistence */
+    const receipt = { items: cart.map(i=>({name:i.name,price:i.price,qty:i.qty})), sub, del, tot };
+
+    /* Persist to localStorage — survives X, logout, tab close */
+    saveActiveOrder({ startTs, orderNumber: oid, receipt, payMode, lastStage: 1 });
+
+    /* Set up UI */
+    document.getElementById('trkId').textContent=oid;
+    document.getElementById('trkSt').textContent=payMode==='QR'?'⏳ Payment Pending':'✅ Confirmed';
+    _applyReceipt(receipt, payMode);
+
+    setStep(3); showToast('🎉 Order placed successfully!');
+
+    /* Render initial state then start background timer */
+    renderTrackingUI(startTs, false);
+    _resumeBackgroundTimer(startTs, oid, receipt, payMode);
+
+  } catch(e) {
+    showToast(e.name==='AbortError' ? 'Request timed out — please try again' : 'Network error — please try again');
+  }
+}
+
+function resetOrder() {
+  clearTimers();
+  clearActiveOrder(); /* wipe persisted order */
+  cart=[]; payMode=null; selArea=null;
+  saveCart();
+  ['ts2','ts3','ts4'].forEach(id=>{const el=document.getElementById(id); if(el) el.className='t-step';});
+  document.getElementById('td1').textContent='✓';
+  document.getElementById('td2').textContent='🍳';
+  document.getElementById('td3').textContent='🛵';
+  document.getElementById('td4').textContent='🎉';
+  ['tt1','tt2','tt3','tt4'].forEach(id=>{const el=document.getElementById(id); if(el){el.classList.remove('on');el.textContent='';}});
+  ['cd2','cd3'].forEach(id=>{const el=document.getElementById(id); if(el){el.classList.remove('on');el.textContent='';}});
+  const tw=document.querySelector('.trk-timer'); if(tw) tw.style.opacity='';
+  const pb=document.getElementById('progressBar'); if(pb) pb.style.width='0%';
+  updateBar();
+  ALL.forEach(i=>refreshAct(i.id));
+}
+
+/* ─── MODALS ─── */
+function openModal(id)  { document.getElementById(id).classList.add('on'); document.body.style.overflow='hidden'; }
+function closeModal(id) {
+  document.getElementById(id).classList.remove('on');
+  document.body.style.overflow='';
+  /* NOTE: Do NOT call clearTimers() here.
+     The background timer keeps running after modal close so the order
+     progresses correctly. Timers are only stopped by resetOrder(). */
+}
+document.querySelectorAll('.overlay').forEach(o=>{
+  o.addEventListener('click', e=>{ if(e.target===o) closeModal(o.id); });
+});
+
+/* ─── TOAST ─── */
+let _t;
+function showToast(msg) {
+  const t=document.getElementById('toast');
+  t.textContent=msg; t.classList.add('on');
+  clearTimeout(_t); _t=setTimeout(()=>t.classList.remove('on'),2800);
+}
+
+</script>
+</body>
+</html>
